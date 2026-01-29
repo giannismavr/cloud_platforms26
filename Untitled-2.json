@@ -1,0 +1,136 @@
+[
+    {
+        "id": "inject_trigger",
+        "type": "inject",
+        "z": "flow1",
+        "name": "Κάθε 1 λεπτό",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "set_login_creds"
+            ]
+        ]
+    },
+    {
+        "id": "set_login_creds",
+        "type": "function",
+        "z": "flow1",
+        "name": "Ορισμός User/Pass",
+        "func": "msg.payload = {
+                "username":"ais25126@hua.gr",
+                "password":"GianMavrod26!"
+                };
+                return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "http_login"
+            ]
+        ]
+    },
+    {
+        "id": "http_login",
+        "type": "http request",
+        "z": "flow1",
+        "name": "Login Request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://10.100.118.30:8080/login",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 560,
+        "y": 100,
+        "wires": [
+            [
+                "set_token_request"
+            ]
+        ]
+    },
+    {
+        "id": "set_token_request",
+        "type": "function",
+        "z": "flow1",
+        "name": "Ετοιμασία Token & Device",
+        "func": "// Παίρνουμε το token από το login
+                var token = msg.payload.token;
+                // 2. ΟΡΙΣΜΟΣ DEVICE ID
+                var deviceId = "c690-e0ab-11f0-81ed-31cd8d4723c7";
+                // 3. Ρυθμίζουμε τα Headers (βάζουμε το κλειδί token για να μας επιτρέψει την πρόσβαση
+                msg.headers = {
+                    "X-Authorization": "Bearer" + token,
+                    "Accept": "application/json"
+                    };
+                    // Φτιάχνουμε το URL για να ζητήσουμε δεδομένα
+                    // Το 'DEVICE' δηλώνει ότι ψάχνουμε συσκευή.
+                    msg.url = "http://10.100.118.30:8080/api/plugins/telemetry/8680000130921288/" + deviceId + "/values/timeseries?keys=temperature";
+                    return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "http_get_data"
+            ]
+        ]
+    },
+    {
+        "id": "http_get_data",
+        "type": "http request",
+        "z": "flow1",
+        "name": "Get Telemetry",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "debug_data"
+            ]
+        ]
+    },
+    {
+        "id": "debug_data",
+        "type": "debug",
+        "z": "flow1",
+        "name": "Αποτέλεσμα",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 750,
+        "y": 240,
+        "wires": []
+    }
+]

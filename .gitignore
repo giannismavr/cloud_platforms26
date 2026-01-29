@@ -1,0 +1,11 @@
+# Αγνοούμε φακέλους δεδομένων και logs
+nodered_data/
+postgres_data/
+rabbitmq/
+minio/
+thingsboard/
+
+# Αγνοούμε προσωρινά αρχεία συστήματος
+.DS_Store
+Thumbs.db
+*.log

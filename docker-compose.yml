@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  nodered:
+    image: nodered/node-red:latest
+    container_name: my-nodered
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered_data:/data
+    environment:
+      - TZ=Europe/Athens
+    networks:
+      - campus-net
+    restart: always
+    
+# MinIO 
+  minio:
+    image: minio/minio:RELEASE.2025-04-22T22-12-26Z
+    container_name: minio
+    restart: always
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000" # MinIO API port
+      - "9001:9001" # MinIO Console/Browser UI port
+    networks:
+      - campus-net
+    volumes:
+      - ./minio/data:/data # Persist object data
+    
+
+   # RabbitMQ (Message Broker)
+  rabbitmq:
+    image: rabbitmq:3.12-management # Includes management plugin for UI
+    container_name: rabbitmq
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+    ports:
+      - "5672:5672" # Standard AMQP port
+      - "15672:15672" # Management UI port
+    networks:
+      - campus-net
+    volumes:
+      - ./rabbitmq/data:/var/lib/rabbitmq # Persist queue and broker data
+
+
+    # ThingsBoard IoT platform
+  mytb:
+    restart: always
+    image: thingsboard/tb-postgres:3.8.1
+    ports:
+      - "8080:9090"
+      - "1883:1883"
+      - "7070:7070"
+      - "5683-5688:5683-5688/udp"
+    environment:
+      TB_QUEUE_TYPE: rabbitmq
+      TB_QUEUE_RABBIT_MQ_USERNAME: user
+      TB_QUEUE_RABBIT_MQ_PASSWORD: password
+      TB_QUEUE_RABBIT_MQ_HOST: rabbitmq
+      TB_QUEUE_RABBIT_MQ_PORT: 5672
+    networks:
+      - campus-net
+    volumes:
+      - ./thingsboard/mytb-data:/data
+      - ./thingsboard/mytb-logs:/var/log/thingsboard  
+
+networks:
+  campus-net:
+    driver: bridge
