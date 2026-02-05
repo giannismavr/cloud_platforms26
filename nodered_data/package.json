@@ -1,0 +1,10 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "@meowwolf/node-red-contrib-amqp": "~2.4.2",
+        "@reggae_ulli/node-red-contrib-minio-all-fix": "~0.0.4"
+    }
+}

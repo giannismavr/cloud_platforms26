@@ -1,12 +1,10 @@
 # Αγνοούμε φακέλους δεδομένων και logs
-nodered_data/
-postgres_data/
-rabbitmq/
-minio/
-thingsboard/
+nodered_data/node_modules/
+nodered_data/.npm/
+nodered_data/.config.*.backup
+nodered_data/*.backup
 
 # Αγνοούμε προσωρινά αρχεία συστήματος
 .DS_Store
 Thumbs.db
 *.log
-*.zip

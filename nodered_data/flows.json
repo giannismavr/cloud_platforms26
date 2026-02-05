@@ -1,0 +1,552 @@
+[
+    {
+        "id": "68458d61bd3e01b1",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "66caf2e73718b2dc",
+        "type": "minio-config",
+        "name": "MinIO Instance",
+        "host": "minio",
+        "port": "9000",
+        "useSsl": false
+    },
+    {
+        "id": "77bccf2a04a6d3f1",
+        "type": "minio-config",
+        "name": "MinIO Instance",
+        "host": "minio",
+        "port": "9000",
+        "useSsl": false
+    },
+    {
+        "id": "a2430096.06941",
+        "type": "minio-config",
+        "name": "Local MinIO",
+        "host": "minio",
+        "port": "9000"
+    },
+    {
+        "id": "ad6a15d695780781",
+        "type": "minio-config",
+        "name": "MinIO Instance",
+        "host": "10.100.59.208",
+        "port": "9003",
+        "useSsl": false
+    },
+    {
+        "id": "b29e40c211b212e0",
+        "type": "amqp-broker",
+        "name": "",
+        "host": "rabbitmq",
+        "port": 5672,
+        "vhost": "/",
+        "tls": false,
+        "credsFromSettings": false
+    },
+    {
+        "id": "e0e37066d39cb191",
+        "type": "inject",
+        "z": "68458d61bd3e01b1",
+        "name": "Κάθε 30 δευτερόλεπτα",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "50",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 250,
+        "y": 80,
+        "wires": [
+            [
+                "ef5a1c7c2c04d027"
+            ]
+        ]
+    },
+    {
+        "id": "8fd58a410efd554d",
+        "type": "http request",
+        "z": "68458d61bd3e01b1",
+        "name": "Login Request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://10.100.118.30:8080/api/auth/login",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 680,
+        "y": 140,
+        "wires": [
+            [
+                "4a4b14b4c679e534"
+            ]
+        ]
+    },
+    {
+        "id": "ef5a1c7c2c04d027",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "Ορισμός User/Pass",
+        "func": "msg.payload = {\n    \"username\": \"ais25126@hua.gr\",\n    \"password\": \"GianMavrod26!\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "8fd58a410efd554d"
+            ]
+        ]
+    },
+    {
+        "id": "66eff4ba6e167e0e",
+        "type": "http request",
+        "z": "68458d61bd3e01b1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "http://10.100.118.30:8080/api/tenant/devices?pageSize=500&page=0&textSearch=MC",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "f96b6da2b9000f66"
+            ]
+        ]
+    },
+    {
+        "id": "b51737604e8ddf4c",
+        "type": "debug",
+        "z": "68458d61bd3e01b1",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "4a4b14b4c679e534",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "Ετοιμασία Token & Device",
+        "func": "// // Παίρνουμε το token από το login\n// var token = msg.payload.token;\n// //var token = \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhaXMyNTEyNkBodWEuZ3IiLCJ1c2VySWQiOiJjNDhmOTU5MC1kYjdiLTExZjAtODFlZC0zMWNkOGQ0NzIzYzciLCJzY29wZXMiOlsiVEVOQU5UX0FETUlOIl0sInNlc3Npb25JZCI6IjMwYjA0ZTZiLWEyNGQtNDA0OC05NWM4LTUyMzI5OGY0OTlhZiIsImV4cCI6MTc2NzUzNjg4OCwiaXNzIjoidGhpbmdzYm9hcmQuaW8iLCJpYXQiOjE3Njc1Mjc4ODgsImVuYWJsZWQiOnRydWUsImlzUHVibGljIjpmYWxzZSwidGVuYW50SWQiOiJiODZlZjI3MC1mYTkzLTExZWYtOWRjYS1hZGNiYWM2YTk4OTkiLCJjdXN0b21lcklkIjoiMTM4MTQwMDAtMWRkMi0xMWIyLTgwODAtODA4MDgwODA4MDgwIn0.8LOnkfDh5lCp6pSVyNCB9jFpukkPYlYrNdIsXFqbKcB42HPYoloqz12byisWRYOFc4wBYyIY6Swa-kNTMhmd-g\"\n\n// // // 2. ΟΡΙΣΜΟΣ DEVICE ID\n// // var deviceId = \"3d8de230-0260-11f0-ab2a-1bdcb487461d\";\n\n// // // 3. Headers \n// // msg.headers = {\n// //     \"X-Authorization\": \"Bearer \" + token,\n// //     \"Accept\": \"application/json\"\n// // };\n\n// // // 4. URL\n// // msg.url = \"http://10.100.118.30:8080/api/plugins/telemetry/DEVICE/8e319610-00cf-11f0-ab2a-1bdcb487461d/values/timeseries\";//telemetry\" + deviceId + \"/values/timeseries?keys=temperature\";\n\n// return token;\n\n\n// 1. Παίρνουμε το token από το προηγούμενο βήμα (login)\nvar token = msg.payload.token;\n\n// 2. Αποθηκεύουμε το token στη μνήμη για να το έχουμε αργότερα ---\nflow.set(\"userToken\", token);\n\n// 3. Δημιουργούμε το αντικείμενο headers που περιμένει το HTTP Request node\nmsg.headers = {\n    // Η λέξη 'Bearer ' ακολουθούμενη από κενό είναι απαραίτητη για το Thingsboard\n    \"Authorization\": \"Bearer \" + token,\n    \"Content-Type\": \"application/json\"\n};\n\n// 4. Προαιρετικά: Καθαρίζουμε το payload αν είναι GET request\n// για να μην μπει όλο το login response μέσα στο URL\nmsg.payload = {}; \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 140,
+        "wires": [
+            [
+                "66eff4ba6e167e0e"
+            ]
+        ]
+    },
+    {
+        "id": "f96b6da2b9000f66",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "function 11",
+        "func": "// // 1. Έλεγχος αν η απάντηση είναι κείμενο (string) και μετατροπή σε αντικείμενο JSON\n// var response = msg.payload;\n// if (typeof response === 'string') {\n//     response = JSON.parse(response);\n// }\n\n// // 2. Εντοπισμός της λίστας των συσκευών\n// // Το Thingsboard επιστρέφει τις συσκευές μέσα σε ένα πεδίο \"data\"\n// var devices = response.data || [];\n\n// // 3. Δημιουργία της λίστας με τα IDs\n// var idsList = [];\n\n// // Διατρέχουμε όλες τις συσκευές και κρατάμε το id\n// // Σημείωση: Στο Thingsboard το id είναι συνήθως αντικείμενο {id: \"...\", entityType: \"DEVICE\"}\n// // Εμείς θέλουμε το εσωτερικό \"id\".\n// devices.forEach(function(device) {\n//     if (device.id && device.id.id) {\n//         idsList.push(device.id.id);\n//     }\n// });\n\n// // 4. Επιστροφή της λίστας στο msg.payload\n// msg.payload = idsList;\n\n// return msg;\n// 1. Έλεγχος αν η απάντηση είναι κείμενο (string) και μετατροπή σε αντικείμενο JSON\nvar response = msg.payload;\nif (typeof response === 'string') {\n    response = JSON.parse(response);\n}\n\n// 2. Εντοπισμός της λίστας των συσκευών\n// Το Thingsboard επιστρέφει τις συσκευές μέσα σε ένα πεδίο \"data\"\nvar devices = response.data || [];\n\n// 3. Δημιουργία της λίστας με IDs + Names\nvar list = [];\n\n// Διατρέχουμε όλες τις συσκευές και κρατάμε το id + name\ndevices.forEach(function(device) {\n    if (device.id && device.id.id) {\n        list.push({\n            deviceId: device.id.id,\n            deviceName: device.name || \"\"   // <-- εδώ το name\n        });\n    }\n});\n\n// 4. Επιστροφή της λίστας στο msg.payload\nmsg.payload = list;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "5c1455ce8d79bb47"
+            ]
+        ]
+    },
+    {
+        "id": "ee592af08dbb3c4b",
+        "type": "http request",
+        "z": "68458d61bd3e01b1",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1070,
+        "y": 220,
+        "wires": [
+            [
+                "14500f8e07b57dc3"
+            ]
+        ]
+    },
+    {
+        "id": "5c1455ce8d79bb47",
+        "type": "split",
+        "z": "68458d61bd3e01b1",
+        "name": "Split IDs",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "202945f593182bfb"
+            ]
+        ]
+    },
+    {
+        "id": "202945f593182bfb",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "function 12",
+        "func": "// Το msg.payload εδώ είναι πλέον το ID μίας συσκευής (λόγω του Split node)\nvar deviceId = msg.payload.deviceId;\nvar deviceName = msg.payload.deviceName;\n\n// --- Σώζουμε το ID για να το έχουμε μετά ---\nmsg.deviceId = deviceId;\nmsg.deviceName = deviceName;\n\n// Ορίζουμε το URL για να πάρουμε τα credentials της συγκεκριμένης συσκευής\n// Προσοχή: Άλλαξε την IP αν χρειάζεται\nvar baseUrl = \"http://10.100.118.30:8080\"; \nmsg.url = baseUrl + \"/api/device/\" + deviceId + \"/credentials\";\n\n\n// --- ΝΕΟ: Ανακτούμε το token από τη μνήμη και ξαναφτιάχνουμε τους headers ---\nvar token = flow.get(\"userToken\");\n\nmsg.headers = {\n    \"Authorization\": \"Bearer \" + token,\n    \"Content-Type\": \"application/json\"\n};\n// Κρατάμε τα headers (που έχουν το token του διαχειριστή) από τα προηγούμενα βήματα\n// ώστε να μας επιτρέψει το Thingsboard να δούμε τα κλειδιά.\nreturn msg;\n\n// var deviceName = msg.payload.deviceName;\n\n// msg.deviceId = deviceId;\n// msg.deviceName = deviceName;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 220,
+        "wires": [
+            [
+                "ee592af08dbb3c4b"
+            ]
+        ]
+    },
+    {
+        "id": "14500f8e07b57dc3",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "function 13",
+        "func": "// // Κρατάμε μόνο το Access Token της συσκευής\n// msg.payload = msg.payload.credentialsId;\n// return msg;\n\n// Φτιάχνουμε ένα αντικείμενο με τα δύο στοιχεία που θέλουμε\nmsg.payload = {\n    deviceId: msg.deviceId,             // Το ID που σώσαμε πριν\n    accessToken: msg.payload.credentialsId, // Το Token που ήρθε τώρα\n    deviceName: msg.deviceName\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "0118ac6e74bb1cd3",
+                "8fad890dc93a92ab"
+            ]
+        ]
+    },
+    {
+        "id": "0118ac6e74bb1cd3",
+        "type": "debug",
+        "z": "68458d61bd3e01b1",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "f67734ad1798b2c9",
+        "type": "debug",
+        "z": "68458d61bd3e01b1",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8fad890dc93a92ab",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "Ετοιμασία Telemetry URL",
+        "func": "// Παίρνουμε το αντικείμενο της συσκευής\nvar device = msg.payload;\nvar deviceId = device.deviceId;\nvar deviceToken = device.accessToken;\n\n// Ανακτούμε το Admin Token από τη μνήμη (flow)\n// Χρειαζόμαστε το Admin token για να διαβάσουμε δεδομένα μέσω API\nvar token = flow.get(\"userToken\");\n\n// Ορίζουμε το χρονικό παράθυρο (τελευταίο 1 λεπτό = 60000 ms)\nvar endTs = Date.now();\nvar startTs = endTs - 60000;\n\n// Φτιάχνουμε το URL για να πάρουμε τα Timeseries δεδομένα\nvar baseUrl = \"http://10.100.118.30:8080\"; \nmsg.url = baseUrl + \"/api/plugins/telemetry/DEVICE/\" + deviceId + \"/values/timeseries?startTs=\" + startTs + \"/&endTs=\" + endTs;\n\n// Βάζουμε τους Headers\nmsg.headers = {\n    \"Authorization\": \"Bearer \" + token,\n    \"Content-Type\": \"application/json\"\n};\n\n// Κρατάμε το ID και το Access Token για το επόμενο βήμα\nmsg.deviceId = deviceId;\nmsg.deviceToken = deviceToken;\n\n// Κρατάμε και το Device Name\nmsg.deviceName = device.deviceName || msg.deviceName || \"\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 320,
+        "wires": [
+            [
+                "92798e0ced537352"
+            ]
+        ]
+    },
+    {
+        "id": "92798e0ced537352",
+        "type": "http request",
+        "z": "68458d61bd3e01b1",
+        "name": "Get Telemetry",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 520,
+        "y": 420,
+        "wires": [
+            [
+                "73e8987d4ca372b2"
+            ]
+        ]
+    },
+    {
+        "id": "975368b39bd3275b",
+        "type": "buckets",
+        "z": "68458d61bd3e01b1",
+        "buckets_name": "",
+        "host": "77bccf2a04a6d3f1",
+        "buckets_operation": "makeBucket",
+        "buckets_bucket": "mc-devices",
+        "buckets_region": "",
+        "buckets_prefix": "",
+        "buckets_recursive": false,
+        "buckets_start_after": "",
+        "x": 710,
+        "y": 700,
+        "wires": [
+            [
+                "f67734ad1798b2c9"
+            ],
+            [
+                "b51737604e8ddf4c"
+            ]
+        ]
+    },
+    {
+        "id": "819607290a0e680b",
+        "type": "debug",
+        "z": "68458d61bd3e01b1",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "483dbd80b06d52ce",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "Format for MinIO",
+        "func": "\nvar telemetryData = msg.payload;\nvar deviceId = msg.deviceId || \"unknown_device\";\nvar deviceToken = msg.deviceToken || \"no_token\";\nvar deviceName = msg.deviceName || \"unknown_name\";\n\nvar objectName = \"data_\" + deviceId + \"_\" + Date.now() + \".json\";\n\nvar finalData = {\n    deviceId: deviceId,\n    deviceName: deviceName,\n    credentialsId: deviceToken,\n    timestamp: new Date().toISOString(),\n    data: telemetryData\n};\n\n//  Buffer για putObject\nvar body = Buffer.from(JSON.stringify(finalData), \"utf8\");\n\n//  Αυτά θα “διαβάσει” το MinIO node από τα πεδία που θα βάλεις\nmsg.objectName = objectName;   // για το Object field\n// msg.payload = body;            // για το Stream field\nmsg.stream = body;\n\nif (typeof telemetryData === 'object' && telemetryData !== null) {\n    telemetryData.deviceName = deviceName;\n}\n\n//var keys = Object.keys(telemetryData || {});\nmsg.metaData = telemetryData;\n\nreturn msg;\n\n// //add your custom metadata\n// //msg.metaData = {'count':msg.payload.length, 'key':msg.fields.routingKey}\n// msg.payload = JSON.stringify(msg.payload);\n// //var buf = Buffer.from(msg.payload, 'utf8');\n// //msg.stream=buf;\n// msg.stream=msg.payload;\n// msg.objectName = msg.fields.routingKey+'_'+Date.now();\n// return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 420,
+        "wires": [
+            [
+                "819607290a0e680b",
+                "adc5e311c225db9e"
+            ]
+        ]
+    },
+    {
+        "id": "423c5b12f31423c5",
+        "type": "debug",
+        "z": "68458d61bd3e01b1",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "163c53a85188bcb5",
+        "type": "debug",
+        "z": "68458d61bd3e01b1",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "adc5e311c225db9e",
+        "type": "objects",
+        "z": "68458d61bd3e01b1",
+        "objects_name": "",
+        "host": "66caf2e73718b2dc",
+        "objects_operation": "putObject",
+        "objects_bucket": "mc-devices2",
+        "objects_object": "",
+        "objects_offset": "",
+        "objects_length": "",
+        "objects_stream": "",
+        "objects_size": "",
+        "objects_metadata": "",
+        "objects_sourceobject": "",
+        "objects_conditions": "",
+        "objects_objectslist": [],
+        "objects_prefix": "",
+        "objects_etag": "",
+        "objects_datetime": "",
+        "x": 1090,
+        "y": 500,
+        "wires": [
+            [
+                "423c5b12f31423c5"
+            ],
+            [
+                "163c53a85188bcb5"
+            ]
+        ]
+    },
+    {
+        "id": "73e8987d4ca372b2",
+        "type": "function",
+        "z": "68458d61bd3e01b1",
+        "name": "function 14",
+        "func": "// Input: msg.payload = {\n//   key1: [{ts:..., value:\"...\"}],\n//   key2: [{ts:..., value:\"...\"}],\n//   ...\n// }\n\n// Helper: string -> number (int/float). Αν δεν γίνεται, επιστρέφει original.\nfunction toNumber(v) {\n  if (v === null || v === undefined) return v;\n  if (typeof v === \"number\") return v;\n  if (typeof v !== \"string\") return v;\n\n  // αν έχει τελεία -> float, αλλιώς int\n  const n = v.includes(\".\") ? parseFloat(v) : parseInt(v, 10);\n  return Number.isFinite(n) ? n : v;\n}\n\n// Παίρνει την τελευταία εγγραφή από array [{ts,value},...]\nfunction latestValue(arr) {\n  if (!Array.isArray(arr) || arr.length === 0) return undefined;\n\n  // Αν είναι ήδη ταξινομημένα, το [0] είναι αρκετό.\n  // Για ασφάλεια βρίσκουμε max ts:\n  let latest = arr[0];\n  for (const x of arr) {\n    if (x && typeof x.ts === \"number\" && (!latest.ts || x.ts > latest.ts)) latest = x;\n  }\n  return latest ? latest.value : undefined;\n}\n\nconst input = msg.payload || {};\nconst out = {};\n\n// 1) Flatten: { key: [{ts,value}] } -> { key: value }\nfor (const key of Object.keys(input)) {\n  const v = latestValue(input[key]);\n  if (v !== undefined) out[key] = toNumber(v);\n}\n\n// 2) Προαιρετικά renames\nconst renames = {\n  loRaSNR: \"snr\"   // αν θέλεις και snr πεδίο\n  // π.χ. magnet_status: \"buzzer_status\"  (ΜΟΝΟ αν όντως είναι ίδιο concept!)\n};\n\nfor (const [from, to] of Object.entries(renames)) {\n  if (out[from] !== undefined) {\n    out[to] = out[from];\n    // αν δεν θες να υπάρχει και το παλιό κλειδί:\n    // delete out[from];\n  }\n}\n\n// 3) (Optional) Αν θες να “εξαναγκάσεις” συγκεκριμένα keys να είναι int/float:\nconst forceInt = [\"battery\", \"rssi\", \"loRaFrequency\", \"loRaBandwidth\", \"loRaSpreadFactor\", \"snr\", \"loRaSNR\"];\nfor (const k of forceInt) {\n  if (out[k] !== undefined) out[k] = parseInt(out[k], 10);\n}\nif (out.loRaSNR !== undefined) out.loRaSNR = parseFloat(out.loRaSNR);\nif (out.snr !== undefined) out.snr = parseFloat(out.snr);\n\n// Output\nmsg.payload = out;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "483dbd80b06d52ce",
+                "a01be5e7bfbb258a"
+            ]
+        ]
+    },
+    {
+        "id": "24828ca32c537714",
+        "type": "inject",
+        "z": "68458d61bd3e01b1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "975368b39bd3275b"
+            ]
+        ]
+    },
+    {
+        "id": "a01be5e7bfbb258a",
+        "type": "debug",
+        "z": "68458d61bd3e01b1",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 580,
+        "wires": []
+    }
+]

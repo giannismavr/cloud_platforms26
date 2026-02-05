@@ -1,0 +1,2 @@
+VHOST: minio
+QUEUE: minio_queue

@@ -1,0 +1,808 @@
+[2026-02-05T19:16:01.676+0000][0.070s][info][gc] Using G1
+[2026-02-05T19:16:01.679+0000][0.073s][info][gc,init] Version: 17.0.12+7-Debian-2deb12u1 (release)
+[2026-02-05T19:16:01.679+0000][0.074s][info][gc,init] CPUs: 12 total, 12 available
+[2026-02-05T19:16:01.679+0000][0.074s][info][gc,init] Memory: 15925M
+[2026-02-05T19:16:01.680+0000][0.074s][info][gc,init] Large Page Support: Disabled
+[2026-02-05T19:16:01.680+0000][0.074s][info][gc,init] NUMA Support: Disabled
+[2026-02-05T19:16:01.680+0000][0.074s][info][gc,init] Compressed Oops: Enabled (Zero based)
+[2026-02-05T19:16:01.680+0000][0.075s][info][gc,init] Heap Region Size: 2M
+[2026-02-05T19:16:01.680+0000][0.075s][info][gc,init] Heap Min Capacity: 8M
+[2026-02-05T19:16:01.681+0000][0.075s][info][gc,init] Heap Initial Capacity: 250M
+[2026-02-05T19:16:01.681+0000][0.075s][info][gc,init] Heap Max Capacity: 3982M
+[2026-02-05T19:16:01.681+0000][0.075s][info][gc,init] Pre-touch: Disabled
+[2026-02-05T19:16:01.681+0000][0.076s][info][gc,init] Parallel Workers: 10
+[2026-02-05T19:16:01.681+0000][0.076s][info][gc,init] Concurrent Workers: 3
+[2026-02-05T19:16:01.682+0000][0.076s][info][gc,init] Concurrent Refinement Workers: 10
+[2026-02-05T19:16:01.682+0000][0.076s][info][gc,init] Periodic GC: Disabled
+[2026-02-05T19:16:01.693+0000][0.088s][info][gc,metaspace] CDS archive(s) mapped at: [0x000076f16b000000-0x000076f16bbc4000-0x000076f16bbc4000), size 12337152, SharedBaseAddress: 0x000076f16b000000, ArchiveRelocationMode: 1.
+[2026-02-05T19:16:01.694+0000][0.088s][info][gc,metaspace] Compressed class space mapped at: 0x000076f16c000000-0x000076f1ac000000, reserved size: 1073741824
+[2026-02-05T19:16:01.694+0000][0.088s][info][gc,metaspace] Narrow klass base: 0x000076f16b000000, Narrow klass shift: 0, Narrow klass range: 0x100000000
+[2026-02-05T19:16:01.701+0000][0.096s][info][cds,heap    ] initialize_from_archived_subgraph java.lang.Module$ArchivedData 0x000076f16b184780 (early)
+[2026-02-05T19:16:01.702+0000][0.096s][info][cds,heap    ] initialize_from_archived_subgraph java.util.ImmutableCollections 0x000076f16b0722d8 (early)
+[2026-02-05T19:16:01.705+0000][0.099s][info][cds,heap    ] initialize_from_archived_subgraph java.lang.Integer$IntegerCache 0x000076f16b037660 (early)
+[2026-02-05T19:16:01.709+0000][0.103s][info][cds,heap    ] initialize_from_archived_subgraph java.lang.module.Configuration 0x000076f16b172700 (early)
+[2026-02-05T19:16:01.710+0000][0.104s][info][cds,heap    ] initialize_from_archived_subgraph java.lang.ModuleLayer 0x000076f16b146b38 (early)
+[2026-02-05T19:16:01.711+0000][0.105s][info][cds,heap    ] initialize_from_archived_subgraph jdk.internal.loader.ArchivedClassLoaders 0x000076f16b1adb70 (early)
+[2026-02-05T19:16:01.711+0000][0.106s][info][cds,heap    ] initialize_from_archived_subgraph jdk.internal.module.ArchivedBootLayer 0x000076f16b179340 (early)
+[2026-02-05T19:16:01.715+0000][0.109s][info][cds,heap    ] initialize_from_archived_subgraph sun.util.locale.BaseLocale 0x000076f16b26d048
+[2026-02-05T19:16:01.725+0000][0.119s][info][cds,heap    ] initialize_from_archived_subgraph java.util.jar.Attributes$Name 0x000076f16b19f5e8
+[2026-02-05T19:16:01.750+0000][0.144s][info][cds,heap    ] initialize_from_archived_subgraph java.lang.Long$LongCache 0x000076f16b020f98
+[2026-02-05T19:16:01.819+0000][0.213s][info][cds,heap    ] initialize_from_archived_subgraph java.lang.Character$CharacterCache 0x000076f16b03a9e8
+[2026-02-05T19:16:02.184+0000][0.578s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (14 threads)
+[2026-02-05T19:16:02.184+0000][0.579s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 483309870 ns, Reaching safepoint: 300415 ns, Cleanup: 51903 ns, At safepoint: 1900 ns, Total: 354218 ns
+[2026-02-05T19:16:02.253+0000][0.647s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (14 threads)
+[2026-02-05T19:16:02.253+0000][0.647s][info ][gc,start    ] GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:02.255+0000][0.649s][info ][gc,task     ] GC(0) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:02.260+0000][0.655s][info ][gc,phases   ] GC(0)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:02.261+0000][0.655s][info ][gc,phases   ] GC(0)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:02.261+0000][0.655s][info ][gc,phases   ] GC(0)   Evacuate Collection Set: 3.6ms
+[2026-02-05T19:16:02.261+0000][0.656s][info ][gc,phases   ] GC(0)   Post Evacuate Collection Set: 1.5ms
+[2026-02-05T19:16:02.261+0000][0.656s][info ][gc,phases   ] GC(0)   Other: 1.9ms
+[2026-02-05T19:16:02.262+0000][0.656s][info ][gc,heap     ] GC(0) Eden regions: 31->0(53)
+[2026-02-05T19:16:02.262+0000][0.656s][info ][gc,heap     ] GC(0) Survivor regions: 0->4(4)
+[2026-02-05T19:16:02.262+0000][0.656s][info ][gc,heap     ] GC(0) Old regions: 0->1
+[2026-02-05T19:16:02.262+0000][0.657s][info ][gc,heap     ] GC(0) Archive regions: 2->2
+[2026-02-05T19:16:02.263+0000][0.657s][info ][gc,heap     ] GC(0) Humongous regions: 0->0
+[2026-02-05T19:16:02.263+0000][0.657s][info ][gc,metaspace] GC(0) Metaspace: 2540K(2752K)->2540K(2752K) NonClass: 2300K(2432K)->2300K(2432K) Class: 239K(320K)->239K(320K)
+[2026-02-05T19:16:02.263+0000][0.657s][info ][gc          ] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 63M->10M(254M) 10.097ms
+[2026-02-05T19:16:02.263+0000][0.658s][info ][gc,cpu      ] GC(0) User=0.02s Sys=0.02s Real=0.01s
+[2026-02-05T19:16:02.263+0000][0.658s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 68137748 ns, Reaching safepoint: 345418 ns, Cleanup: 42903 ns, At safepoint: 10450144 ns, Total: 10838465 ns
+[2026-02-05T19:16:02.983+0000][1.377s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:02.983+0000][1.378s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 719380163 ns, Reaching safepoint: 340318 ns, Cleanup: 254113 ns, At safepoint: 22101 ns, Total: 616532 ns
+[2026-02-05T19:16:03.146+0000][1.540s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:03.146+0000][1.541s][info ][gc,start    ] GC(1) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:03.146+0000][1.541s][info ][gc,task     ] GC(1) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:03.153+0000][1.547s][info ][gc,phases   ] GC(1)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:03.153+0000][1.547s][info ][gc,phases   ] GC(1)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:03.153+0000][1.548s][info ][gc,phases   ] GC(1)   Evacuate Collection Set: 3.9ms
+[2026-02-05T19:16:03.153+0000][1.548s][info ][gc,phases   ] GC(1)   Post Evacuate Collection Set: 2.1ms
+[2026-02-05T19:16:03.154+0000][1.548s][info ][gc,phases   ] GC(1)   Other: 0.3ms
+[2026-02-05T19:16:03.154+0000][1.548s][info ][gc,heap     ] GC(1) Eden regions: 53->0(69)
+[2026-02-05T19:16:03.154+0000][1.548s][info ][gc,heap     ] GC(1) Survivor regions: 4->6(8)
+[2026-02-05T19:16:03.154+0000][1.548s][info ][gc,heap     ] GC(1) Old regions: 1->1
+[2026-02-05T19:16:03.154+0000][1.549s][info ][gc,heap     ] GC(1) Archive regions: 2->2
+[2026-02-05T19:16:03.154+0000][1.549s][info ][gc,heap     ] GC(1) Humongous regions: 0->0
+[2026-02-05T19:16:03.154+0000][1.549s][info ][gc,metaspace] GC(1) Metaspace: 7019K(7296K)->7019K(7296K) NonClass: 6153K(6272K)->6153K(6272K) Class: 865K(1024K)->865K(1024K)
+[2026-02-05T19:16:03.155+0000][1.549s][info ][gc          ] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 116M->14M(254M) 8.222ms
+[2026-02-05T19:16:03.155+0000][1.549s][info ][gc,cpu      ] GC(1) User=0.02s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:03.155+0000][1.549s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 162746275 ns, Reaching safepoint: 208211 ns, Cleanup: 18801 ns, At safepoint: 8486442 ns, Total: 8713454 ns
+[2026-02-05T19:16:03.696+0000][2.091s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:03.697+0000][2.091s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 541626606 ns, Reaching safepoint: 451524 ns, Cleanup: 96505 ns, At safepoint: 40102 ns, Total: 588131 ns
+[2026-02-05T19:16:03.768+0000][2.162s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:03.768+0000][2.163s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 70688181 ns, Reaching safepoint: 406021 ns, Cleanup: 90105 ns, At safepoint: 2800 ns, Total: 498926 ns
+[2026-02-05T19:16:03.953+0000][2.348s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (16 threads)
+[2026-02-05T19:16:03.954+0000][2.348s][info ][gc,start    ] GC(2) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:03.954+0000][2.348s][info ][gc,task     ] GC(2) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:03.964+0000][2.358s][info ][gc,phases   ] GC(2)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:03.964+0000][2.358s][info ][gc,phases   ] GC(2)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:03.964+0000][2.359s][info ][gc,phases   ] GC(2)   Evacuate Collection Set: 7.3ms
+[2026-02-05T19:16:03.965+0000][2.359s][info ][gc,phases   ] GC(2)   Post Evacuate Collection Set: 2.0ms
+[2026-02-05T19:16:03.965+0000][2.359s][info ][gc,phases   ] GC(2)   Other: 0.6ms
+[2026-02-05T19:16:03.965+0000][2.359s][info ][gc,heap     ] GC(2) Eden regions: 69->0(71)
+[2026-02-05T19:16:03.965+0000][2.360s][info ][gc,heap     ] GC(2) Survivor regions: 6->4(10)
+[2026-02-05T19:16:03.965+0000][2.360s][info ][gc,heap     ] GC(2) Old regions: 1->5
+[2026-02-05T19:16:03.966+0000][2.360s][info ][gc,heap     ] GC(2) Archive regions: 2->2
+[2026-02-05T19:16:03.966+0000][2.360s][info ][gc,heap     ] GC(2) Humongous regions: 0->0
+[2026-02-05T19:16:03.966+0000][2.360s][info ][gc,metaspace] GC(2) Metaspace: 12597K(12864K)->12597K(12864K) NonClass: 10971K(11136K)->10971K(11136K) Class: 1626K(1728K)->1626K(1728K)
+[2026-02-05T19:16:03.966+0000][2.361s][info ][gc          ] GC(2) Pause Young (Normal) (G1 Evacuation Pause) 152M->17M(254M) 12.537ms
+[2026-02-05T19:16:03.966+0000][2.361s][info ][gc,cpu      ] GC(2) User=0.03s Sys=0.03s Real=0.01s
+[2026-02-05T19:16:03.966+0000][2.361s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 184932831 ns, Reaching safepoint: 399120 ns, Cleanup: 60304 ns, At safepoint: 12862569 ns, Total: 13321993 ns
+[2026-02-05T19:16:04.422+0000][2.817s][info ][cds,heap    ] initialize_from_archived_subgraph java.lang.Byte$ByteCache 0x000076f16b03abf8
+[2026-02-05T19:16:04.423+0000][2.817s][info ][cds,heap    ] initialize_from_archived_subgraph java.lang.Short$ShortCache 0x000076f16b0412e8
+[2026-02-05T19:16:04.496+0000][2.891s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:04.497+0000][2.891s][info ][gc,start    ] GC(3) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:04.497+0000][2.891s][info ][gc,task     ] GC(3) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:04.501+0000][2.896s][info ][gc,phases   ] GC(3)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:04.502+0000][2.896s][info ][gc,phases   ] GC(3)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:04.502+0000][2.896s][info ][gc,phases   ] GC(3)   Evacuate Collection Set: 3.0ms
+[2026-02-05T19:16:04.502+0000][2.897s][info ][gc,phases   ] GC(3)   Post Evacuate Collection Set: 1.0ms
+[2026-02-05T19:16:04.502+0000][2.897s][info ][gc,phases   ] GC(3)   Other: 0.4ms
+[2026-02-05T19:16:04.502+0000][2.897s][info ][gc,heap     ] GC(3) Eden regions: 71->0(71)
+[2026-02-05T19:16:04.503+0000][2.897s][info ][gc,heap     ] GC(3) Survivor regions: 4->4(10)
+[2026-02-05T19:16:04.503+0000][2.897s][info ][gc,heap     ] GC(3) Old regions: 5->5
+[2026-02-05T19:16:04.503+0000][2.897s][info ][gc,heap     ] GC(3) Archive regions: 2->2
+[2026-02-05T19:16:04.503+0000][2.897s][info ][gc,heap     ] GC(3) Humongous regions: 0->0
+[2026-02-05T19:16:04.503+0000][2.897s][info ][gc,metaspace] GC(3) Metaspace: 17289K(17664K)->17289K(17664K) NonClass: 14961K(15168K)->14961K(15168K) Class: 2328K(2496K)->2328K(2496K)
+[2026-02-05T19:16:04.503+0000][2.897s][info ][gc          ] GC(3) Pause Young (Normal) (G1 Evacuation Pause) 159M->17M(254M) 6.428ms
+[2026-02-05T19:16:04.503+0000][2.898s][info ][gc,cpu      ] GC(3) User=0.03s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:04.503+0000][2.898s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 529818492 ns, Reaching safepoint: 335017 ns, Cleanup: 70504 ns, At safepoint: 6772752 ns, Total: 7178273 ns
+[2026-02-05T19:16:04.789+0000][3.184s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (16 threads)
+[2026-02-05T19:16:04.790+0000][3.184s][info ][gc,start    ] GC(4) Pause Young (Concurrent Start) (Metadata GC Threshold)
+[2026-02-05T19:16:04.790+0000][3.184s][info ][gc,task     ] GC(4) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:04.799+0000][3.193s][info ][gc,phases   ] GC(4)   Pre Evacuate Collection Set: 0.3ms
+[2026-02-05T19:16:04.799+0000][3.194s][info ][gc,phases   ] GC(4)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:04.800+0000][3.194s][info ][gc,phases   ] GC(4)   Evacuate Collection Set: 6.2ms
+[2026-02-05T19:16:04.800+0000][3.194s][info ][gc,phases   ] GC(4)   Post Evacuate Collection Set: 1.4ms
+[2026-02-05T19:16:04.800+0000][3.195s][info ][gc,phases   ] GC(4)   Other: 0.9ms
+[2026-02-05T19:16:04.800+0000][3.195s][info ][gc,heap     ] GC(4) Eden regions: 40->0(69)
+[2026-02-05T19:16:04.801+0000][3.195s][info ][gc,heap     ] GC(4) Survivor regions: 4->6(10)
+[2026-02-05T19:16:04.801+0000][3.195s][info ][gc,heap     ] GC(4) Old regions: 5->5
+[2026-02-05T19:16:04.801+0000][3.195s][info ][gc,heap     ] GC(4) Archive regions: 2->2
+[2026-02-05T19:16:04.801+0000][3.196s][info ][gc,heap     ] GC(4) Humongous regions: 0->0
+[2026-02-05T19:16:04.801+0000][3.196s][info ][gc,metaspace] GC(4) Metaspace: 21281K(21504K)->21281K(21504K) NonClass: 18509K(18624K)->18509K(18624K) Class: 2771K(2880K)->2771K(2880K)
+[2026-02-05T19:16:04.802+0000][3.196s][info ][gc          ] GC(4) Pause Young (Concurrent Start) (Metadata GC Threshold) 97M->21M(254M) 11.670ms
+[2026-02-05T19:16:04.802+0000][3.196s][info ][gc,cpu      ] GC(4) User=0.04s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:04.802+0000][3.196s][info ][gc          ] GC(5) Concurrent Mark Cycle
+[2026-02-05T19:16:04.803+0000][3.198s][info ][gc,marking  ] GC(5) Concurrent Clear Claimed Marks
+[2026-02-05T19:16:04.804+0000][3.198s][info ][gc,marking  ] GC(5) Concurrent Clear Claimed Marks 0.696ms
+[2026-02-05T19:16:04.804+0000][3.199s][info ][gc,marking  ] GC(5) Concurrent Scan Root Regions
+[2026-02-05T19:16:04.802+0000][3.197s][info ][safepoint   ] Safepoint "CollectForMetadataAllocation", Time since last: 286005795 ns, Reaching safepoint: 381920 ns, Cleanup: 36501 ns, At safepoint: 12344243 ns, Total: 12762664 ns
+[2026-02-05T19:16:04.809+0000][3.203s][info ][gc,marking  ] GC(5) Concurrent Scan Root Regions 4.245ms
+[2026-02-05T19:16:04.809+0000][3.204s][info ][gc,marking  ] GC(5) Concurrent Mark
+[2026-02-05T19:16:04.810+0000][3.204s][info ][gc,marking  ] GC(5) Concurrent Mark From Roots
+[2026-02-05T19:16:04.810+0000][3.204s][info ][gc,task     ] GC(5) Using 3 workers of 3 for marking
+[2026-02-05T19:16:04.816+0000][3.210s][info ][gc,marking  ] GC(5) Concurrent Mark From Roots 5.901ms
+[2026-02-05T19:16:04.816+0000][3.210s][info ][gc,marking  ] GC(5) Concurrent Preclean
+[2026-02-05T19:16:04.816+0000][3.211s][info ][gc,marking  ] GC(5) Concurrent Preclean 0.608ms
+[2026-02-05T19:16:04.817+0000][3.211s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (16 threads)
+[2026-02-05T19:16:04.817+0000][3.211s][info ][gc,start    ] GC(5) Pause Remark
+[2026-02-05T19:16:04.819+0000][3.214s][info ][gc          ] GC(5) Pause Remark 23M->23M(94M) 2.356ms
+[2026-02-05T19:16:04.820+0000][3.214s][info ][gc,cpu      ] GC(5) User=0.02s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:04.820+0000][3.214s][info ][safepoint   ] Safepoint "G1PauseRemark", Time since last: 14503756 ns, Reaching safepoint: 215211 ns, Cleanup: 26601 ns, At safepoint: 2854549 ns, Total: 3096361 ns
+[2026-02-05T19:16:04.820+0000][3.214s][info ][gc,marking  ] GC(5) Concurrent Mark 10.759ms
+[2026-02-05T19:16:04.820+0000][3.215s][info ][gc,marking  ] GC(5) Concurrent Rebuild Remembered Sets
+[2026-02-05T19:16:04.822+0000][3.217s][info ][gc,marking  ] GC(5) Concurrent Rebuild Remembered Sets 2.220ms
+[2026-02-05T19:16:04.827+0000][3.221s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (16 threads)
+[2026-02-05T19:16:04.828+0000][3.222s][info ][gc,start    ] GC(5) Pause Cleanup
+[2026-02-05T19:16:04.828+0000][3.222s][info ][gc          ] GC(5) Pause Cleanup 24M->24M(94M) 0.342ms
+[2026-02-05T19:16:04.828+0000][3.223s][info ][gc,cpu      ] GC(5) User=0.00s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:04.828+0000][3.223s][info ][safepoint   ] Safepoint "G1PauseCleanup", Time since last: 3048659 ns, Reaching safepoint: 4699744 ns, Cleanup: 5201 ns, At safepoint: 833843 ns, Total: 5538788 ns
+[2026-02-05T19:16:04.829+0000][3.223s][info ][gc,marking  ] GC(5) Concurrent Cleanup for Next Mark
+[2026-02-05T19:16:04.830+0000][3.224s][info ][gc,marking  ] GC(5) Concurrent Cleanup for Next Mark 0.885ms
+[2026-02-05T19:16:04.830+0000][3.224s][info ][gc          ] GC(5) Concurrent Mark Cycle 28.001ms
+[2026-02-05T19:16:05.047+0000][3.441s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (16 threads)
+[2026-02-05T19:16:05.048+0000][3.442s][info ][gc,start    ] GC(6) Pause Young (Prepare Mixed) (G1 Preventive Collection)
+[2026-02-05T19:16:05.048+0000][3.442s][info ][gc,task     ] GC(6) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:05.054+0000][3.448s][info ][gc,phases   ] GC(6)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:05.054+0000][3.448s][info ][gc,phases   ] GC(6)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:05.054+0000][3.448s][info ][gc,phases   ] GC(6)   Evacuate Collection Set: 4.7ms
+[2026-02-05T19:16:05.054+0000][3.449s][info ][gc,phases   ] GC(6)   Post Evacuate Collection Set: 0.8ms
+[2026-02-05T19:16:05.054+0000][3.449s][info ][gc,phases   ] GC(6)   Other: 0.4ms
+[2026-02-05T19:16:05.054+0000][3.449s][info ][gc,heap     ] GC(6) Eden regions: 25->0(1)
+[2026-02-05T19:16:05.055+0000][3.449s][info ][gc,heap     ] GC(6) Survivor regions: 6->6(10)
+[2026-02-05T19:16:05.055+0000][3.449s][info ][gc,heap     ] GC(6) Old regions: 5->5
+[2026-02-05T19:16:05.055+0000][3.449s][info ][gc,heap     ] GC(6) Archive regions: 2->2
+[2026-02-05T19:16:05.055+0000][3.449s][info ][gc,heap     ] GC(6) Humongous regions: 0->0
+[2026-02-05T19:16:05.055+0000][3.450s][info ][gc,metaspace] GC(6) Metaspace: 23456K(23808K)->23456K(23808K) NonClass: 20396K(20608K)->20396K(20608K) Class: 3060K(3200K)->3060K(3200K)
+[2026-02-05T19:16:05.055+0000][3.450s][info ][gc          ] GC(6) Pause Young (Prepare Mixed) (G1 Preventive Collection) 71M->22M(94M) 7.923ms
+[2026-02-05T19:16:05.056+0000][3.450s][info ][gc,cpu      ] GC(6) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:05.056+0000][3.450s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 218110859 ns, Reaching safepoint: 949749 ns, Cleanup: 48603 ns, At safepoint: 8278831 ns, Total: 9277183 ns
+[2026-02-05T19:16:05.063+0000][3.457s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (16 threads)
+[2026-02-05T19:16:05.064+0000][3.458s][info ][gc,start    ] GC(7) Pause Young (Mixed) (G1 Evacuation Pause)
+[2026-02-05T19:16:05.064+0000][3.458s][info ][gc,task     ] GC(7) Using 4 workers of 10 for evacuation
+[2026-02-05T19:16:05.071+0000][3.465s][info ][gc,phases   ] GC(7)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:05.071+0000][3.465s][info ][gc,phases   ] GC(7)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:05.071+0000][3.465s][info ][gc,phases   ] GC(7)   Evacuate Collection Set: 5.6ms
+[2026-02-05T19:16:05.071+0000][3.466s][info ][gc,phases   ] GC(7)   Post Evacuate Collection Set: 0.8ms
+[2026-02-05T19:16:05.071+0000][3.466s][info ][gc,phases   ] GC(7)   Other: 0.4ms
+[2026-02-05T19:16:05.072+0000][3.466s][info ][gc,heap     ] GC(7) Eden regions: 1->0(24)
+[2026-02-05T19:16:05.072+0000][3.466s][info ][gc,heap     ] GC(7) Survivor regions: 6->1(1)
+[2026-02-05T19:16:05.072+0000][3.466s][info ][gc,heap     ] GC(7) Old regions: 5->10
+[2026-02-05T19:16:05.072+0000][3.466s][info ][gc,heap     ] GC(7) Archive regions: 2->2
+[2026-02-05T19:16:05.072+0000][3.466s][info ][gc,heap     ] GC(7) Humongous regions: 0->0
+[2026-02-05T19:16:05.072+0000][3.467s][info ][gc,metaspace] GC(7) Metaspace: 23573K(23872K)->23573K(23872K) NonClass: 20497K(20672K)->20497K(20672K) Class: 3075K(3200K)->3075K(3200K)
+[2026-02-05T19:16:05.072+0000][3.467s][info ][gc          ] GC(7) Pause Young (Mixed) (G1 Evacuation Pause) 24M->23M(94M) 8.881ms
+[2026-02-05T19:16:05.073+0000][3.467s][info ][gc,cpu      ] GC(7) User=0.04s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:05.073+0000][3.467s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 7219376 ns, Reaching safepoint: 463924 ns, Cleanup: 8400 ns, At safepoint: 9221180 ns, Total: 9693504 ns
+[2026-02-05T19:16:05.264+0000][3.659s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:05.271+0000][3.666s][info ][gc,start    ] GC(8) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:05.272+0000][3.666s][info ][gc,task     ] GC(8) Using 3 workers of 10 for evacuation
+[2026-02-05T19:16:05.276+0000][3.671s][info ][gc,phases   ] GC(8)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:05.277+0000][3.671s][info ][gc,phases   ] GC(8)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:05.277+0000][3.672s][info ][gc,phases   ] GC(8)   Evacuate Collection Set: 2.6ms
+[2026-02-05T19:16:05.278+0000][3.672s][info ][gc,phases   ] GC(8)   Post Evacuate Collection Set: 1.2ms
+[2026-02-05T19:16:05.278+0000][3.672s][info ][gc,phases   ] GC(8)   Other: 0.7ms
+[2026-02-05T19:16:05.278+0000][3.673s][info ][gc,heap     ] GC(8) Eden regions: 24->0(53)
+[2026-02-05T19:16:05.278+0000][3.673s][info ][gc,heap     ] GC(8) Survivor regions: 1->3(4)
+[2026-02-05T19:16:05.279+0000][3.673s][info ][gc,heap     ] GC(8) Old regions: 10->10
+[2026-02-05T19:16:05.279+0000][3.673s][info ][gc,heap     ] GC(8) Archive regions: 2->2
+[2026-02-05T19:16:05.279+0000][3.673s][info ][gc,heap     ] GC(8) Humongous regions: 0->0
+[2026-02-05T19:16:05.279+0000][3.673s][info ][gc,metaspace] GC(8) Metaspace: 24396K(24704K)->24396K(24704K) NonClass: 21226K(21376K)->21226K(21376K) Class: 3170K(3328K)->3170K(3328K)
+[2026-02-05T19:16:05.279+0000][3.674s][info ][gc          ] GC(8) Pause Young (Normal) (G1 Evacuation Pause) 71M->25M(188M) 7.931ms
+[2026-02-05T19:16:05.280+0000][3.674s][info ][gc,cpu      ] GC(8) User=0.01s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:05.280+0000][3.674s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 191778488 ns, Reaching safepoint: 6841256 ns, Cleanup: 73704 ns, At safepoint: 8459240 ns, Total: 15374200 ns
+[2026-02-05T19:16:05.571+0000][3.965s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:05.571+0000][3.966s][info ][gc,start    ] GC(9) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:05.571+0000][3.966s][info ][gc,task     ] GC(9) Using 4 workers of 10 for evacuation
+[2026-02-05T19:16:05.582+0000][3.976s][info ][gc,phases   ] GC(9)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:05.582+0000][3.977s][info ][gc,phases   ] GC(9)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:05.583+0000][3.977s][info ][gc,phases   ] GC(9)   Evacuate Collection Set: 8.4ms
+[2026-02-05T19:16:05.583+0000][3.977s][info ][gc,phases   ] GC(9)   Post Evacuate Collection Set: 1.3ms
+[2026-02-05T19:16:05.583+0000][3.978s][info ][gc,phases   ] GC(9)   Other: 0.7ms
+[2026-02-05T19:16:05.584+0000][3.978s][info ][gc,heap     ] GC(9) Eden regions: 53->0(49)
+[2026-02-05T19:16:05.584+0000][3.978s][info ][gc,heap     ] GC(9) Survivor regions: 3->7(7)
+[2026-02-05T19:16:05.584+0000][3.978s][info ][gc,heap     ] GC(9) Old regions: 10->12
+[2026-02-05T19:16:05.584+0000][3.979s][info ][gc,heap     ] GC(9) Archive regions: 2->2
+[2026-02-05T19:16:05.585+0000][3.979s][info ][gc,heap     ] GC(9) Humongous regions: 0->0
+[2026-02-05T19:16:05.585+0000][3.979s][info ][gc,metaspace] GC(9) Metaspace: 24542K(24896K)->24542K(24896K) NonClass: 21351K(21504K)->21351K(21504K) Class: 3190K(3392K)->3190K(3392K)
+[2026-02-05T19:16:05.585+0000][3.980s][info ][gc          ] GC(9) Pause Young (Normal) (G1 Evacuation Pause) 131M->38M(188M) 13.961ms
+[2026-02-05T19:16:05.585+0000][3.980s][info ][gc,cpu      ] GC(9) User=0.06s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:05.586+0000][3.980s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 290861847 ns, Reaching safepoint: 414121 ns, Cleanup: 20002 ns, At safepoint: 14451352 ns, Total: 14885475 ns
+[2026-02-05T19:16:05.828+0000][4.222s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:05.829+0000][4.223s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 242467625 ns, Reaching safepoint: 388621 ns, Cleanup: 151308 ns, At safepoint: 2500 ns, Total: 542429 ns
+[2026-02-05T19:16:05.864+0000][4.258s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:05.864+0000][4.259s][info ][gc,start    ] GC(10) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:05.865+0000][4.259s][info ][gc,task     ] GC(10) Using 4 workers of 10 for evacuation
+[2026-02-05T19:16:05.878+0000][4.272s][info ][gc,phases   ] GC(10)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:05.878+0000][4.273s][info ][gc,phases   ] GC(10)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:05.879+0000][4.273s][info ][gc,phases   ] GC(10)   Evacuate Collection Set: 11.2ms
+[2026-02-05T19:16:05.879+0000][4.273s][info ][gc,phases   ] GC(10)   Post Evacuate Collection Set: 1.6ms
+[2026-02-05T19:16:05.879+0000][4.273s][info ][gc,phases   ] GC(10)   Other: 0.6ms
+[2026-02-05T19:16:05.879+0000][4.274s][info ][gc,heap     ] GC(10) Eden regions: 49->0(45)
+[2026-02-05T19:16:05.880+0000][4.274s][info ][gc,heap     ] GC(10) Survivor regions: 7->5(7)
+[2026-02-05T19:16:05.880+0000][4.274s][info ][gc,heap     ] GC(10) Old regions: 12->19
+[2026-02-05T19:16:05.880+0000][4.274s][info ][gc,heap     ] GC(10) Archive regions: 2->2
+[2026-02-05T19:16:05.880+0000][4.275s][info ][gc,heap     ] GC(10) Humongous regions: 0->0
+[2026-02-05T19:16:05.880+0000][4.275s][info ][gc,metaspace] GC(10) Metaspace: 24954K(25344K)->24954K(25344K) NonClass: 21709K(21888K)->21709K(21888K) Class: 3245K(3456K)->3245K(3456K)
+[2026-02-05T19:16:05.881+0000][4.275s][info ][gc          ] GC(10) Pause Young (Normal) (G1 Evacuation Pause) 136M->48M(188M) 16.280ms
+[2026-02-05T19:16:05.881+0000][4.275s][info ][gc,cpu      ] GC(10) User=0.07s Sys=0.00s Real=0.02s
+[2026-02-05T19:16:05.881+0000][4.275s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 35272736 ns, Reaching safepoint: 451024 ns, Cleanup: 13501 ns, At safepoint: 16749172 ns, Total: 17213697 ns
+[2026-02-05T19:16:06.226+0000][4.621s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:06.227+0000][4.621s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 345200674 ns, Reaching safepoint: 377820 ns, Cleanup: 97705 ns, At safepoint: 29702 ns, Total: 505227 ns
+[2026-02-05T19:16:06.250+0000][4.644s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:06.250+0000][4.645s][info ][gc,start    ] GC(11) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:06.251+0000][4.645s][info ][gc,task     ] GC(11) Using 4 workers of 10 for evacuation
+[2026-02-05T19:16:06.260+0000][4.654s][info ][gc,phases   ] GC(11)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:06.260+0000][4.654s][info ][gc,phases   ] GC(11)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:06.260+0000][4.655s][info ][gc,phases   ] GC(11)   Evacuate Collection Set: 6.8ms
+[2026-02-05T19:16:06.261+0000][4.655s][info ][gc,phases   ] GC(11)   Post Evacuate Collection Set: 1.6ms
+[2026-02-05T19:16:06.261+0000][4.655s][info ][gc,phases   ] GC(11)   Other: 0.7ms
+[2026-02-05T19:16:06.261+0000][4.656s][info ][gc,heap     ] GC(11) Eden regions: 45->0(45)
+[2026-02-05T19:16:06.262+0000][4.656s][info ][gc,heap     ] GC(11) Survivor regions: 5->3(7)
+[2026-02-05T19:16:06.262+0000][4.656s][info ][gc,heap     ] GC(11) Old regions: 19->23
+[2026-02-05T19:16:06.262+0000][4.657s][info ][gc,heap     ] GC(11) Archive regions: 2->2
+[2026-02-05T19:16:06.262+0000][4.657s][info ][gc,heap     ] GC(11) Humongous regions: 0->0
+[2026-02-05T19:16:06.263+0000][4.657s][info ][gc,metaspace] GC(11) Metaspace: 25180K(25536K)->25180K(25536K) NonClass: 21921K(22080K)->21921K(22080K) Class: 3258K(3456K)->3258K(3456K)
+[2026-02-05T19:16:06.263+0000][4.657s][info ][gc          ] GC(11) Pause Young (Normal) (G1 Evacuation Pause) 138M->52M(188M) 12.697ms
+[2026-02-05T19:16:06.263+0000][4.658s][info ][gc,cpu      ] GC(11) User=0.04s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:06.263+0000][4.658s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 22927394 ns, Reaching safepoint: 458823 ns, Cleanup: 12001 ns, At safepoint: 13200787 ns, Total: 13671611 ns
+[2026-02-05T19:16:06.537+0000][4.931s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:06.537+0000][4.931s][info ][gc,start    ] GC(12) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:06.537+0000][4.932s][info ][gc,task     ] GC(12) Using 4 workers of 10 for evacuation
+[2026-02-05T19:16:06.545+0000][4.939s][info ][gc,phases   ] GC(12)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:06.545+0000][4.940s][info ][gc,phases   ] GC(12)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:06.546+0000][4.940s][info ][gc,phases   ] GC(12)   Evacuate Collection Set: 5.2ms
+[2026-02-05T19:16:06.546+0000][4.940s][info ][gc,phases   ] GC(12)   Post Evacuate Collection Set: 1.3ms
+[2026-02-05T19:16:06.546+0000][4.941s][info ][gc,phases   ] GC(12)   Other: 0.8ms
+[2026-02-05T19:16:06.547+0000][4.941s][info ][gc,heap     ] GC(12) Eden regions: 45->0(65)
+[2026-02-05T19:16:06.547+0000][4.941s][info ][gc,heap     ] GC(12) Survivor regions: 3->4(6)
+[2026-02-05T19:16:06.547+0000][4.941s][info ][gc,heap     ] GC(12) Old regions: 23->23
+[2026-02-05T19:16:06.547+0000][4.942s][info ][gc,heap     ] GC(12) Archive regions: 2->2
+[2026-02-05T19:16:06.548+0000][4.942s][info ][gc,heap     ] GC(12) Humongous regions: 0->0
+[2026-02-05T19:16:06.548+0000][4.943s][info ][gc,metaspace] GC(12) Metaspace: 25272K(25664K)->25272K(25664K) NonClass: 22001K(22208K)->22001K(22208K) Class: 3271K(3456K)->3271K(3456K)
+[2026-02-05T19:16:06.548+0000][4.943s][info ][gc          ] GC(12) Pause Young (Normal) (G1 Evacuation Pause) 142M->55M(238M) 11.242ms
+[2026-02-05T19:16:06.549+0000][4.943s][info ][gc,cpu      ] GC(12) User=0.06s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:06.549+0000][4.943s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 273168524 ns, Reaching safepoint: 450724 ns, Cleanup: 49703 ns, At safepoint: 11676308 ns, Total: 12176735 ns
+[2026-02-05T19:16:06.955+0000][5.349s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:06.955+0000][5.349s][info ][gc,start    ] GC(13) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:06.955+0000][5.350s][info ][gc,task     ] GC(13) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:06.961+0000][5.355s][info ][gc,phases   ] GC(13)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:06.961+0000][5.356s][info ][gc,phases   ] GC(13)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:06.961+0000][5.356s][info ][gc,phases   ] GC(13)   Evacuate Collection Set: 4.0ms
+[2026-02-05T19:16:06.962+0000][5.356s][info ][gc,phases   ] GC(13)   Post Evacuate Collection Set: 1.1ms
+[2026-02-05T19:16:06.962+0000][5.356s][info ][gc,phases   ] GC(13)   Other: 0.4ms
+[2026-02-05T19:16:06.962+0000][5.356s][info ][gc,heap     ] GC(13) Eden regions: 65->0(66)
+[2026-02-05T19:16:06.962+0000][5.357s][info ][gc,heap     ] GC(13) Survivor regions: 4->5(9)
+[2026-02-05T19:16:06.962+0000][5.357s][info ][gc,heap     ] GC(13) Old regions: 23->23
+[2026-02-05T19:16:06.963+0000][5.357s][info ][gc,heap     ] GC(13) Archive regions: 2->2
+[2026-02-05T19:16:06.963+0000][5.357s][info ][gc,heap     ] GC(13) Humongous regions: 0->0
+[2026-02-05T19:16:06.963+0000][5.357s][info ][gc,metaspace] GC(13) Metaspace: 26880K(27264K)->26880K(27264K) NonClass: 23484K(23680K)->23484K(23680K) Class: 3396K(3584K)->3396K(3584K)
+[2026-02-05T19:16:06.963+0000][5.358s][info ][gc          ] GC(13) Pause Young (Normal) (G1 Evacuation Pause) 185M->55M(238M) 8.266ms
+[2026-02-05T19:16:06.964+0000][5.358s][info ][gc,cpu      ] GC(13) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:06.964+0000][5.358s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 406053943 ns, Reaching safepoint: 243013 ns, Cleanup: 28501 ns, At safepoint: 8632050 ns, Total: 8903564 ns
+[2026-02-05T19:16:07.557+0000][5.951s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (14 threads)
+[2026-02-05T19:16:07.557+0000][5.952s][info ][gc,start    ] GC(14) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:07.558+0000][5.952s][info ][gc,task     ] GC(14) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:07.565+0000][5.959s][info ][gc,phases   ] GC(14)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:07.565+0000][5.959s][info ][gc,phases   ] GC(14)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:07.565+0000][5.960s][info ][gc,phases   ] GC(14)   Evacuate Collection Set: 4.4ms
+[2026-02-05T19:16:07.566+0000][5.960s][info ][gc,phases   ] GC(14)   Post Evacuate Collection Set: 1.6ms
+[2026-02-05T19:16:07.566+0000][5.960s][info ][gc,phases   ] GC(14)   Other: 0.8ms
+[2026-02-05T19:16:07.566+0000][5.961s][info ][gc,heap     ] GC(14) Eden regions: 66->0(66)
+[2026-02-05T19:16:07.566+0000][5.961s][info ][gc,heap     ] GC(14) Survivor regions: 5->5(9)
+[2026-02-05T19:16:07.567+0000][5.961s][info ][gc,heap     ] GC(14) Old regions: 23->23
+[2026-02-05T19:16:07.567+0000][5.961s][info ][gc,heap     ] GC(14) Archive regions: 2->2
+[2026-02-05T19:16:07.567+0000][5.961s][info ][gc,heap     ] GC(14) Humongous regions: 0->0
+[2026-02-05T19:16:07.567+0000][5.962s][info ][gc,metaspace] GC(14) Metaspace: 33191K(33600K)->33191K(33600K) NonClass: 29091K(29312K)->29091K(29312K) Class: 4100K(4288K)->4100K(4288K)
+[2026-02-05T19:16:07.568+0000][5.962s][info ][gc          ] GC(14) Pause Young (Normal) (G1 Evacuation Pause) 187M->57M(238M) 10.026ms
+[2026-02-05T19:16:07.568+0000][5.962s][info ][gc,cpu      ] GC(14) User=0.03s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:07.568+0000][5.962s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 593156785 ns, Reaching safepoint: 419922 ns, Cleanup: 115206 ns, At safepoint: 10624654 ns, Total: 11159782 ns
+[2026-02-05T19:16:08.135+0000][6.530s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:08.136+0000][6.530s][info ][gc,start    ] GC(15) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:08.136+0000][6.530s][info ][gc,task     ] GC(15) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:08.141+0000][6.536s][info ][gc,phases   ] GC(15)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:08.142+0000][6.536s][info ][gc,phases   ] GC(15)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:08.142+0000][6.536s][info ][gc,phases   ] GC(15)   Evacuate Collection Set: 3.9ms
+[2026-02-05T19:16:08.142+0000][6.537s][info ][gc,phases   ] GC(15)   Post Evacuate Collection Set: 0.9ms
+[2026-02-05T19:16:08.142+0000][6.537s][info ][gc,phases   ] GC(15)   Other: 0.5ms
+[2026-02-05T19:16:08.143+0000][6.537s][info ][gc,heap     ] GC(15) Eden regions: 66->0(67)
+[2026-02-05T19:16:08.143+0000][6.537s][info ][gc,heap     ] GC(15) Survivor regions: 5->4(9)
+[2026-02-05T19:16:08.143+0000][6.537s][info ][gc,heap     ] GC(15) Old regions: 23->25
+[2026-02-05T19:16:08.143+0000][6.537s][info ][gc,heap     ] GC(15) Archive regions: 2->2
+[2026-02-05T19:16:08.143+0000][6.538s][info ][gc,heap     ] GC(15) Humongous regions: 0->0
+[2026-02-05T19:16:08.143+0000][6.538s][info ][gc,metaspace] GC(15) Metaspace: 34645K(35008K)->34645K(35008K) NonClass: 30342K(30528K)->30342K(30528K) Class: 4303K(4480K)->4303K(4480K)
+[2026-02-05T19:16:08.144+0000][6.538s][info ][gc          ] GC(15) Pause Young (Normal) (G1 Evacuation Pause) 189M->57M(238M) 7.761ms
+[2026-02-05T19:16:08.144+0000][6.538s][info ][gc,cpu      ] GC(15) User=0.04s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:08.144+0000][6.538s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 567219135 ns, Reaching safepoint: 406721 ns, Cleanup: 103305 ns, At safepoint: 8188327 ns, Total: 8698353 ns
+[2026-02-05T19:16:08.401+0000][6.795s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:08.401+0000][6.796s][info ][gc,start    ] GC(16) Pause Young (Concurrent Start) (Metadata GC Threshold)
+[2026-02-05T19:16:08.402+0000][6.796s][info ][gc,task     ] GC(16) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:08.406+0000][6.800s][info ][gc,phases   ] GC(16)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:08.406+0000][6.801s][info ][gc,phases   ] GC(16)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:08.407+0000][6.801s][info ][gc,phases   ] GC(16)   Evacuate Collection Set: 2.9ms
+[2026-02-05T19:16:08.407+0000][6.801s][info ][gc,phases   ] GC(16)   Post Evacuate Collection Set: 0.8ms
+[2026-02-05T19:16:08.407+0000][6.801s][info ][gc,phases   ] GC(16)   Other: 0.5ms
+[2026-02-05T19:16:08.407+0000][6.802s][info ][gc,heap     ] GC(16) Eden regions: 32->0(67)
+[2026-02-05T19:16:08.407+0000][6.802s][info ][gc,heap     ] GC(16) Survivor regions: 4->4(9)
+[2026-02-05T19:16:08.408+0000][6.802s][info ][gc,heap     ] GC(16) Old regions: 25->25
+[2026-02-05T19:16:08.408+0000][6.803s][info ][gc,heap     ] GC(16) Archive regions: 2->2
+[2026-02-05T19:16:08.408+0000][6.803s][info ][gc,heap     ] GC(16) Humongous regions: 0->0
+[2026-02-05T19:16:08.409+0000][6.803s][info ][gc,metaspace] GC(16) Metaspace: 35782K(36096K)->35782K(36096K) NonClass: 31343K(31488K)->31343K(31488K) Class: 4438K(4608K)->4438K(4608K)
+[2026-02-05T19:16:08.409+0000][6.803s][info ][gc          ] GC(16) Pause Young (Concurrent Start) (Metadata GC Threshold) 120M->57M(238M) 7.443ms
+[2026-02-05T19:16:08.409+0000][6.804s][info ][gc,cpu      ] GC(16) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:08.409+0000][6.804s][info ][gc          ] GC(17) Concurrent Mark Cycle
+[2026-02-05T19:16:08.410+0000][6.804s][info ][gc,marking  ] GC(17) Concurrent Clear Claimed Marks
+[2026-02-05T19:16:08.410+0000][6.804s][info ][safepoint   ] Safepoint "CollectForMetadataAllocation", Time since last: 257017983 ns, Reaching safepoint: 322217 ns, Cleanup: 69503 ns, At safepoint: 8193927 ns, Total: 8585647 ns
+[2026-02-05T19:16:08.410+0000][6.804s][info ][gc,marking  ] GC(17) Concurrent Clear Claimed Marks 0.299ms
+[2026-02-05T19:16:08.411+0000][6.805s][info ][gc,marking  ] GC(17) Concurrent Scan Root Regions
+[2026-02-05T19:16:08.413+0000][6.808s][info ][gc,marking  ] GC(17) Concurrent Scan Root Regions 2.637ms
+[2026-02-05T19:16:08.415+0000][6.810s][info ][gc,marking  ] GC(17) Concurrent Mark
+[2026-02-05T19:16:08.415+0000][6.810s][info ][gc,marking  ] GC(17) Concurrent Mark From Roots
+[2026-02-05T19:16:08.416+0000][6.810s][info ][gc,task     ] GC(17) Using 3 workers of 3 for marking
+[2026-02-05T19:16:08.442+0000][6.837s][info ][gc,marking  ] GC(17) Concurrent Mark From Roots 26.924ms
+[2026-02-05T19:16:08.443+0000][6.837s][info ][gc,marking  ] GC(17) Concurrent Preclean
+[2026-02-05T19:16:08.443+0000][6.838s][info ][gc,marking  ] GC(17) Concurrent Preclean 0.535ms
+[2026-02-05T19:16:08.444+0000][6.838s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:08.444+0000][6.838s][info ][gc,start    ] GC(17) Pause Remark
+[2026-02-05T19:16:08.447+0000][6.841s][info ][gc          ] GC(17) Pause Remark 61M->61M(220M) 2.741ms
+[2026-02-05T19:16:08.447+0000][6.841s][info ][gc,cpu      ] GC(17) User=0.01s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:08.447+0000][6.842s][info ][safepoint   ] Safepoint "G1PauseRemark", Time since last: 34143478 ns, Reaching safepoint: 343718 ns, Cleanup: 13700 ns, At safepoint: 3290972 ns, Total: 3648390 ns
+[2026-02-05T19:16:08.448+0000][6.842s][info ][gc,marking  ] GC(17) Concurrent Mark 32.377ms
+[2026-02-05T19:16:08.448+0000][6.842s][info ][gc,marking  ] GC(17) Concurrent Rebuild Remembered Sets
+[2026-02-05T19:16:08.459+0000][6.854s][info ][gc,marking  ] GC(17) Concurrent Rebuild Remembered Sets 11.531ms
+[2026-02-05T19:16:08.460+0000][6.854s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:08.460+0000][6.854s][info ][gc,start    ] GC(17) Pause Cleanup
+[2026-02-05T19:16:08.460+0000][6.855s][info ][gc          ] GC(17) Pause Cleanup 63M->63M(220M) 0.304ms
+[2026-02-05T19:16:08.460+0000][6.855s][info ][gc,cpu      ] GC(17) User=0.00s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:08.461+0000][6.855s][info ][safepoint   ] Safepoint "G1PauseCleanup", Time since last: 12356043 ns, Reaching safepoint: 289515 ns, Cleanup: 8001 ns, At safepoint: 683935 ns, Total: 981451 ns
+[2026-02-05T19:16:08.461+0000][6.855s][info ][gc,marking  ] GC(17) Concurrent Cleanup for Next Mark
+[2026-02-05T19:16:08.462+0000][6.856s][info ][gc,marking  ] GC(17) Concurrent Cleanup for Next Mark 0.869ms
+[2026-02-05T19:16:08.462+0000][6.856s][info ][gc          ] GC(17) Concurrent Mark Cycle 52.507ms
+[2026-02-05T19:16:08.949+0000][7.344s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:08.950+0000][7.344s][info ][gc,start    ] GC(18) Pause Young (Prepare Mixed) (G1 Evacuation Pause)
+[2026-02-05T19:16:08.950+0000][7.344s][info ][gc,task     ] GC(18) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:08.955+0000][7.349s][info ][gc,phases   ] GC(18)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:08.955+0000][7.350s][info ][gc,phases   ] GC(18)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:08.956+0000][7.350s][info ][gc,phases   ] GC(18)   Evacuate Collection Set: 3.2ms
+[2026-02-05T19:16:08.956+0000][7.350s][info ][gc,phases   ] GC(18)   Post Evacuate Collection Set: 1.1ms
+[2026-02-05T19:16:08.956+0000][7.350s][info ][gc,phases   ] GC(18)   Other: 0.8ms
+[2026-02-05T19:16:08.956+0000][7.351s][info ][gc,heap     ] GC(18) Eden regions: 62->0(1)
+[2026-02-05T19:16:08.956+0000][7.351s][info ][gc,heap     ] GC(18) Survivor regions: 4->4(9)
+[2026-02-05T19:16:08.957+0000][7.351s][info ][gc,heap     ] GC(18) Old regions: 25->25
+[2026-02-05T19:16:08.957+0000][7.351s][info ][gc,heap     ] GC(18) Archive regions: 2->2
+[2026-02-05T19:16:08.957+0000][7.351s][info ][gc,heap     ] GC(18) Humongous regions: 0->0
+[2026-02-05T19:16:08.957+0000][7.351s][info ][gc,metaspace] GC(18) Metaspace: 38818K(39168K)->38818K(39168K) NonClass: 33921K(34112K)->33921K(34112K) Class: 4896K(5056K)->4896K(5056K)
+[2026-02-05T19:16:08.957+0000][7.352s][info ][gc          ] GC(18) Pause Young (Prepare Mixed) (G1 Evacuation Pause) 181M->57M(220M) 7.517ms
+[2026-02-05T19:16:08.957+0000][7.352s][info ][gc,cpu      ] GC(18) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:08.958+0000][7.352s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 488670846 ns, Reaching safepoint: 335617 ns, Cleanup: 69504 ns, At safepoint: 7911012 ns, Total: 8316133 ns
+[2026-02-05T19:16:08.968+0000][7.362s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:08.968+0000][7.363s][info ][gc,start    ] GC(19) Pause Young (Mixed) (G1 Evacuation Pause)
+[2026-02-05T19:16:08.968+0000][7.363s][info ][gc,task     ] GC(19) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:08.972+0000][7.367s][info ][gc,phases   ] GC(19)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:08.973+0000][7.367s][info ][gc,phases   ] GC(19)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:08.973+0000][7.367s][info ][gc,phases   ] GC(19)   Evacuate Collection Set: 3.0ms
+[2026-02-05T19:16:08.973+0000][7.367s][info ][gc,phases   ] GC(19)   Post Evacuate Collection Set: 0.6ms
+[2026-02-05T19:16:08.973+0000][7.368s][info ][gc,phases   ] GC(19)   Other: 0.4ms
+[2026-02-05T19:16:08.973+0000][7.368s][info ][gc,heap     ] GC(19) Eden regions: 1->0(62)
+[2026-02-05T19:16:08.974+0000][7.368s][info ][gc,heap     ] GC(19) Survivor regions: 4->1(1)
+[2026-02-05T19:16:08.974+0000][7.368s][info ][gc,heap     ] GC(19) Old regions: 25->28
+[2026-02-05T19:16:08.974+0000][7.368s][info ][gc,heap     ] GC(19) Archive regions: 2->2
+[2026-02-05T19:16:08.974+0000][7.368s][info ][gc,heap     ] GC(19) Humongous regions: 0->0
+[2026-02-05T19:16:08.974+0000][7.369s][info ][gc,metaspace] GC(19) Metaspace: 38829K(39168K)->38829K(39168K) NonClass: 33933K(34112K)->33933K(34112K) Class: 4896K(5056K)->4896K(5056K)
+[2026-02-05T19:16:08.975+0000][7.369s][info ][gc          ] GC(19) Pause Young (Mixed) (G1 Evacuation Pause) 59M->58M(220M) 6.334ms
+[2026-02-05T19:16:08.975+0000][7.369s][info ][gc,cpu      ] GC(19) User=0.01s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:08.975+0000][7.369s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 10197931 ns, Reaching safepoint: 298715 ns, Cleanup: 7201 ns, At safepoint: 6685048 ns, Total: 6990964 ns
+[2026-02-05T19:16:09.694+0000][8.088s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:09.695+0000][8.089s][info ][gc,start    ] GC(20) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:09.695+0000][8.089s][info ][gc,task     ] GC(20) Using 5 workers of 10 for evacuation
+[2026-02-05T19:16:09.700+0000][8.094s][info ][gc,phases   ] GC(20)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:09.700+0000][8.094s][info ][gc,phases   ] GC(20)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:09.700+0000][8.095s][info ][gc,phases   ] GC(20)   Evacuate Collection Set: 2.7ms
+[2026-02-05T19:16:09.701+0000][8.095s][info ][gc,phases   ] GC(20)   Post Evacuate Collection Set: 1.6ms
+[2026-02-05T19:16:09.701+0000][8.095s][info ][gc,phases   ] GC(20)   Other: 0.6ms
+[2026-02-05T19:16:09.701+0000][8.096s][info ][gc,heap     ] GC(20) Eden regions: 62->0(112)
+[2026-02-05T19:16:09.702+0000][8.096s][info ][gc,heap     ] GC(20) Survivor regions: 1->2(8)
+[2026-02-05T19:16:09.702+0000][8.096s][info ][gc,heap     ] GC(20) Old regions: 28->28
+[2026-02-05T19:16:09.702+0000][8.096s][info ][gc,heap     ] GC(20) Archive regions: 2->2
+[2026-02-05T19:16:09.702+0000][8.097s][info ][gc,heap     ] GC(20) Humongous regions: 0->0
+[2026-02-05T19:16:09.703+0000][8.097s][info ][gc,metaspace] GC(20) Metaspace: 41499K(41920K)->41499K(41920K) NonClass: 36262K(36480K)->36262K(36480K) Class: 5236K(5440K)->5236K(5440K)
+[2026-02-05T19:16:09.703+0000][8.097s][info ][gc          ] GC(20) Pause Young (Normal) (G1 Evacuation Pause) 182M->59M(382M) 8.231ms
+[2026-02-05T19:16:09.703+0000][8.097s][info ][gc,cpu      ] GC(20) User=0.03s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:09.703+0000][8.098s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 719035940 ns, Reaching safepoint: 556929 ns, Cleanup: 98305 ns, At safepoint: 8795158 ns, Total: 9450392 ns
+[2026-02-05T19:16:10.763+0000][9.157s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:10.763+0000][9.158s][info ][safepoint   ] Safepoint "Cleanup", Time since last: 1059165251 ns, Reaching safepoint: 511827 ns, Cleanup: 142108 ns, At safepoint: 96405 ns, Total: 750340 ns
+[2026-02-05T19:16:11.441+0000][9.835s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:11.441+0000][9.836s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 677398172 ns, Reaching safepoint: 349818 ns, Cleanup: 119806 ns, At safepoint: 19301 ns, Total: 488925 ns
+[2026-02-05T19:16:11.647+0000][10.041s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:11.647+0000][10.041s][info ][gc,start    ] GC(21) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:11.647+0000][10.042s][info ][gc,task     ] GC(21) Using 9 workers of 10 for evacuation
+[2026-02-05T19:16:11.653+0000][10.047s][info ][gc,phases   ] GC(21)   Pre Evacuate Collection Set: 0.3ms
+[2026-02-05T19:16:11.653+0000][10.048s][info ][gc,phases   ] GC(21)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:11.653+0000][10.048s][info ][gc,phases   ] GC(21)   Evacuate Collection Set: 3.3ms
+[2026-02-05T19:16:11.654+0000][10.048s][info ][gc,phases   ] GC(21)   Post Evacuate Collection Set: 1.4ms
+[2026-02-05T19:16:11.654+0000][10.048s][info ][gc,phases   ] GC(21)   Other: 0.5ms
+[2026-02-05T19:16:11.654+0000][10.049s][info ][gc,heap     ] GC(21) Eden regions: 112->0(110)
+[2026-02-05T19:16:11.655+0000][10.049s][info ][gc,heap     ] GC(21) Survivor regions: 2->4(15)
+[2026-02-05T19:16:11.655+0000][10.049s][info ][gc,heap     ] GC(21) Old regions: 28->28
+[2026-02-05T19:16:11.655+0000][10.050s][info ][gc,heap     ] GC(21) Archive regions: 2->2
+[2026-02-05T19:16:11.656+0000][10.050s][info ][gc,heap     ] GC(21) Humongous regions: 0->0
+[2026-02-05T19:16:11.656+0000][10.050s][info ][gc,metaspace] GC(21) Metaspace: 47431K(47872K)->47431K(47872K) NonClass: 41356K(41600K)->41356K(41600K) Class: 6074K(6272K)->6074K(6272K)
+[2026-02-05T19:16:11.656+0000][10.050s][info ][gc          ] GC(21) Pause Young (Normal) (G1 Evacuation Pause) 283M->63M(382M) 8.805ms
+[2026-02-05T19:16:11.656+0000][10.050s][info ][gc,cpu      ] GC(21) User=0.05s Sys=0.01s Real=0.02s
+[2026-02-05T19:16:11.656+0000][10.051s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 205535803 ns, Reaching safepoint: 371019 ns, Cleanup: 25701 ns, At safepoint: 9153377 ns, Total: 9550097 ns
+[2026-02-05T19:16:12.148+0000][10.542s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (15 threads)
+[2026-02-05T19:16:12.149+0000][10.543s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 491481792 ns, Reaching safepoint: 694136 ns, Cleanup: 156308 ns, At safepoint: 42102 ns, Total: 892546 ns
+[2026-02-05T19:16:13.327+0000][11.722s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (17 threads)
+[2026-02-05T19:16:13.328+0000][11.722s][info ][safepoint   ] Safepoint "Cleanup", Time since last: 1178698776 ns, Reaching safepoint: 214611 ns, Cleanup: 43202 ns, At safepoint: 2400 ns, Total: 260213 ns
+[2026-02-05T19:16:13.936+0000][12.330s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (18 threads)
+[2026-02-05T19:16:13.936+0000][12.331s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 608274595 ns, Reaching safepoint: 387520 ns, Cleanup: 110605 ns, At safepoint: 2901 ns, Total: 501026 ns
+[2026-02-05T19:16:14.363+0000][12.758s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (18 threads)
+[2026-02-05T19:16:14.364+0000][12.758s][info ][gc,start    ] GC(22) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:14.364+0000][12.758s][info ][gc,task     ] GC(22) Using 9 workers of 10 for evacuation
+[2026-02-05T19:16:14.373+0000][12.768s][info ][gc,phases   ] GC(22)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:14.374+0000][12.768s][info ][gc,phases   ] GC(22)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:14.374+0000][12.768s][info ][gc,phases   ] GC(22)   Evacuate Collection Set: 6.3ms
+[2026-02-05T19:16:14.374+0000][12.769s][info ][gc,phases   ] GC(22)   Post Evacuate Collection Set: 2.5ms
+[2026-02-05T19:16:14.374+0000][12.769s][info ][gc,phases   ] GC(22)   Other: 0.7ms
+[2026-02-05T19:16:14.375+0000][12.769s][info ][gc,heap     ] GC(22) Eden regions: 110->0(108)
+[2026-02-05T19:16:14.375+0000][12.769s][info ][gc,heap     ] GC(22) Survivor regions: 4->6(15)
+[2026-02-05T19:16:14.375+0000][12.769s][info ][gc,heap     ] GC(22) Old regions: 28->28
+[2026-02-05T19:16:14.375+0000][12.770s][info ][gc,heap     ] GC(22) Archive regions: 2->2
+[2026-02-05T19:16:14.376+0000][12.770s][info ][gc,heap     ] GC(22) Humongous regions: 0->0
+[2026-02-05T19:16:14.376+0000][12.770s][info ][gc,metaspace] GC(22) Metaspace: 56550K(56960K)->56550K(56960K) NonClass: 49397K(49600K)->49397K(49600K) Class: 7153K(7360K)->7153K(7360K)
+[2026-02-05T19:16:14.376+0000][12.770s][info ][gc          ] GC(22) Pause Young (Normal) (G1 Evacuation Pause) 283M->67M(382M) 12.411ms
+[2026-02-05T19:16:14.376+0000][12.771s][info ][gc,cpu      ] GC(22) User=0.07s Sys=0.00s Real=0.02s
+[2026-02-05T19:16:14.376+0000][12.771s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 426804745 ns, Reaching safepoint: 318816 ns, Cleanup: 36602 ns, At safepoint: 12983474 ns, Total: 13338892 ns
+[2026-02-05T19:16:14.965+0000][13.359s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (18 threads)
+[2026-02-05T19:16:14.965+0000][13.359s][info ][gc,start    ] GC(23) Pause Young (Concurrent Start) (Metadata GC Threshold)
+[2026-02-05T19:16:14.965+0000][13.360s][info ][gc,task     ] GC(23) Using 9 workers of 10 for evacuation
+[2026-02-05T19:16:14.972+0000][13.367s][info ][gc,phases   ] GC(23)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:14.973+0000][13.367s][info ][gc,phases   ] GC(23)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:14.973+0000][13.367s][info ][gc,phases   ] GC(23)   Evacuate Collection Set: 4.9ms
+[2026-02-05T19:16:14.973+0000][13.367s][info ][gc,phases   ] GC(23)   Post Evacuate Collection Set: 1.4ms
+[2026-02-05T19:16:14.973+0000][13.368s][info ][gc,phases   ] GC(23)   Other: 0.4ms
+[2026-02-05T19:16:14.973+0000][13.368s][info ][gc,heap     ] GC(23) Eden regions: 49->0(108)
+[2026-02-05T19:16:14.974+0000][13.368s][info ][gc,heap     ] GC(23) Survivor regions: 6->6(15)
+[2026-02-05T19:16:14.974+0000][13.368s][info ][gc,heap     ] GC(23) Old regions: 28->28
+[2026-02-05T19:16:14.974+0000][13.368s][info ][gc,heap     ] GC(23) Archive regions: 2->2
+[2026-02-05T19:16:14.976+0000][13.371s][info ][gc,heap     ] GC(23) Humongous regions: 0->0
+[2026-02-05T19:16:14.976+0000][13.371s][info ][gc,metaspace] GC(23) Metaspace: 60373K(60736K)->60373K(60736K) NonClass: 52685K(52864K)->52685K(52864K) Class: 7688K(7872K)->7688K(7872K)
+[2026-02-05T19:16:14.977+0000][13.371s][info ][gc          ] GC(23) Pause Young (Concurrent Start) (Metadata GC Threshold) 164M->68M(382M) 11.602ms
+[2026-02-05T19:16:14.977+0000][13.371s][info ][gc,cpu      ] GC(23) User=0.04s Sys=0.00s Real=0.02s
+[2026-02-05T19:16:14.977+0000][13.372s][info ][gc          ] GC(24) Concurrent Mark Cycle
+[2026-02-05T19:16:14.977+0000][13.372s][info ][gc,marking  ] GC(24) Concurrent Clear Claimed Marks
+[2026-02-05T19:16:14.977+0000][13.372s][info ][safepoint   ] Safepoint "CollectForMetadataAllocation", Time since last: 588340726 ns, Reaching safepoint: 248113 ns, Cleanup: 34502 ns, At safepoint: 12144530 ns, Total: 12427145 ns
+[2026-02-05T19:16:14.978+0000][13.372s][info ][gc,marking  ] GC(24) Concurrent Clear Claimed Marks 0.218ms
+[2026-02-05T19:16:14.978+0000][13.372s][info ][gc,marking  ] GC(24) Concurrent Scan Root Regions
+[2026-02-05T19:16:14.982+0000][13.377s][info ][gc,marking  ] GC(24) Concurrent Scan Root Regions 4.193ms
+[2026-02-05T19:16:14.983+0000][13.377s][info ][gc,marking  ] GC(24) Concurrent Mark
+[2026-02-05T19:16:14.983+0000][13.377s][info ][gc,marking  ] GC(24) Concurrent Mark From Roots
+[2026-02-05T19:16:14.983+0000][13.377s][info ][gc,task     ] GC(24) Using 3 workers of 3 for marking
+[2026-02-05T19:16:15.008+0000][13.402s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (19 threads)
+[2026-02-05T19:16:15.008+0000][13.403s][info ][safepoint   ] Safepoint "CollectForMetadataAllocation", Time since last: 30622389 ns, Reaching safepoint: 361318 ns, Cleanup: 14401 ns, At safepoint: 137807 ns, Total: 513526 ns
+[2026-02-05T19:16:15.018+0000][13.413s][info ][gc,marking  ] GC(24) Concurrent Mark From Roots 35.344ms
+[2026-02-05T19:16:15.019+0000][13.413s][info ][gc,marking  ] GC(24) Concurrent Preclean
+[2026-02-05T19:16:15.019+0000][13.414s][info ][gc,marking  ] GC(24) Concurrent Preclean 0.633ms
+[2026-02-05T19:16:15.020+0000][13.414s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (19 threads)
+[2026-02-05T19:16:15.020+0000][13.414s][info ][gc,start    ] GC(24) Pause Remark
+[2026-02-05T19:16:15.025+0000][13.420s][info ][gc          ] GC(24) Pause Remark 72M->72M(254M) 5.306ms
+[2026-02-05T19:16:15.027+0000][13.422s][info ][gc,cpu      ] GC(24) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:15.028+0000][13.422s][info ][safepoint   ] Safepoint "G1PauseRemark", Time since last: 11244384 ns, Reaching safepoint: 338417 ns, Cleanup: 16601 ns, At safepoint: 7764403 ns, Total: 8119421 ns
+[2026-02-05T19:16:15.028+0000][13.422s][info ][gc,marking  ] GC(24) Concurrent Mark 45.444ms
+[2026-02-05T19:16:15.028+0000][13.423s][info ][gc,marking  ] GC(24) Concurrent Rebuild Remembered Sets
+[2026-02-05T19:16:15.047+0000][13.441s][info ][gc,marking  ] GC(24) Concurrent Rebuild Remembered Sets 18.367ms
+[2026-02-05T19:16:15.047+0000][13.441s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (19 threads)
+[2026-02-05T19:16:15.047+0000][13.442s][info ][gc,start    ] GC(24) Pause Cleanup
+[2026-02-05T19:16:15.048+0000][13.442s][info ][gc          ] GC(24) Pause Cleanup 72M->72M(254M) 0.414ms
+[2026-02-05T19:16:15.048+0000][13.442s][info ][gc,cpu      ] GC(24) User=0.00s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:15.048+0000][13.443s][info ][safepoint   ] Safepoint "G1PauseCleanup", Time since last: 19296801 ns, Reaching safepoint: 256514 ns, Cleanup: 13400 ns, At safepoint: 816143 ns, Total: 1086057 ns
+[2026-02-05T19:16:15.048+0000][13.443s][info ][gc,marking  ] GC(24) Concurrent Cleanup for Next Mark
+[2026-02-05T19:16:15.050+0000][13.444s][info ][gc,marking  ] GC(24) Concurrent Cleanup for Next Mark 1.357ms
+[2026-02-05T19:16:15.050+0000][13.444s][info ][gc          ] GC(24) Concurrent Mark Cycle 72.739ms
+[2026-02-05T19:16:15.728+0000][14.122s][debug][safepoint   ] ... found polling page loop exception at pc = 0x000076f1d937cc1f, stub =0x000076f1d8b10400
+[2026-02-05T19:16:15.736+0000][14.131s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:15.738+0000][14.132s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 688148705 ns, Reaching safepoint: 303815 ns, Cleanup: 1083157 ns, At safepoint: 35001 ns, Total: 1421973 ns
+[2026-02-05T19:16:15.813+0000][14.207s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:15.813+0000][14.208s][info ][gc,start    ] GC(25) Pause Young (Prepare Mixed) (G1 Evacuation Pause)
+[2026-02-05T19:16:15.814+0000][14.208s][info ][gc,task     ] GC(25) Using 7 workers of 10 for evacuation
+[2026-02-05T19:16:15.820+0000][14.215s][info ][gc,phases   ] GC(25)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:15.821+0000][14.215s][info ][gc,phases   ] GC(25)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:15.821+0000][14.215s][info ][gc,phases   ] GC(25)   Evacuate Collection Set: 5.3ms
+[2026-02-05T19:16:15.821+0000][14.215s][info ][gc,phases   ] GC(25)   Post Evacuate Collection Set: 1.2ms
+[2026-02-05T19:16:15.821+0000][14.216s][info ][gc,phases   ] GC(25)   Other: 0.4ms
+[2026-02-05T19:16:15.821+0000][14.216s][info ][gc,heap     ] GC(25) Eden regions: 70->0(1)
+[2026-02-05T19:16:15.822+0000][14.216s][info ][gc,heap     ] GC(25) Survivor regions: 6->6(10)
+[2026-02-05T19:16:15.822+0000][14.216s][info ][gc,heap     ] GC(25) Old regions: 28->29
+[2026-02-05T19:16:15.822+0000][14.216s][info ][gc,heap     ] GC(25) Archive regions: 2->2
+[2026-02-05T19:16:15.822+0000][14.216s][info ][gc,heap     ] GC(25) Humongous regions: 0->0
+[2026-02-05T19:16:15.822+0000][14.217s][info ][gc,metaspace] GC(25) Metaspace: 63646K(64128K)->63646K(64128K) NonClass: 55538K(55808K)->55538K(55808K) Class: 8107K(8320K)->8107K(8320K)
+[2026-02-05T19:16:15.822+0000][14.217s][info ][gc          ] GC(25) Pause Young (Prepare Mixed) (G1 Evacuation Pause) 208M->69M(254M) 9.037ms
+[2026-02-05T19:16:15.823+0000][14.217s][info ][gc,cpu      ] GC(25) User=0.04s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:15.823+0000][14.217s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 75332609 ns, Reaching safepoint: 259114 ns, Cleanup: 15000 ns, At safepoint: 9351086 ns, Total: 9625200 ns
+[2026-02-05T19:16:15.829+0000][14.223s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:15.829+0000][14.224s][info ][gc,start    ] GC(26) Pause Young (Mixed) (G1 Evacuation Pause)
+[2026-02-05T19:16:15.829+0000][14.224s][info ][gc,task     ] GC(26) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:15.836+0000][14.231s][info ][gc,phases   ] GC(26)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:15.837+0000][14.231s][info ][gc,phases   ] GC(26)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:15.841+0000][14.235s][info ][gc,phases   ] GC(26)   Evacuate Collection Set: 5.3ms
+[2026-02-05T19:16:15.841+0000][14.235s][info ][gc,phases   ] GC(26)   Post Evacuate Collection Set: 1.0ms
+[2026-02-05T19:16:15.842+0000][14.236s][info ][gc,phases   ] GC(26)   Other: 0.4ms
+[2026-02-05T19:16:15.842+0000][14.236s][info ][gc,heap     ] GC(26) Eden regions: 1->0(72)
+[2026-02-05T19:16:15.842+0000][14.236s][info ][gc,heap     ] GC(26) Survivor regions: 6->1(1)
+[2026-02-05T19:16:15.842+0000][14.237s][info ][gc,heap     ] GC(26) Old regions: 29->34
+[2026-02-05T19:16:15.842+0000][14.237s][info ][gc,heap     ] GC(26) Archive regions: 2->2
+[2026-02-05T19:16:15.843+0000][14.237s][info ][gc,heap     ] GC(26) Humongous regions: 0->0
+[2026-02-05T19:16:15.843+0000][14.237s][info ][gc,metaspace] GC(26) Metaspace: 63672K(64128K)->63672K(64128K) NonClass: 55558K(55808K)->55558K(55808K) Class: 8113K(8320K)->8113K(8320K)
+[2026-02-05T19:16:15.843+0000][14.237s][info ][gc          ] GC(26) Pause Young (Mixed) (G1 Evacuation Pause) 71M->70M(254M) 13.653ms
+[2026-02-05T19:16:15.843+0000][14.237s][info ][gc,cpu      ] GC(26) User=0.04s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:15.843+0000][14.238s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 6194321 ns, Reaching safepoint: 305216 ns, Cleanup: 3400 ns, At safepoint: 13976325 ns, Total: 14284941 ns
+[2026-02-05T19:16:16.374+0000][14.768s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (20 threads)
+[2026-02-05T19:16:16.374+0000][14.769s][info ][gc,start    ] GC(27) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+[2026-02-05T19:16:16.375+0000][14.769s][info ][gc,task     ] GC(27) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:16.377+0000][14.772s][info ][gc,phases   ] GC(27)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:16.379+0000][14.774s][info ][gc,phases   ] GC(27)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:16.380+0000][14.774s][info ][gc,phases   ] GC(27)   Evacuate Collection Set: 1.7ms
+[2026-02-05T19:16:16.380+0000][14.774s][info ][gc,phases   ] GC(27)   Post Evacuate Collection Set: 0.7ms
+[2026-02-05T19:16:16.380+0000][14.774s][info ][gc,phases   ] GC(27)   Other: 0.4ms
+[2026-02-05T19:16:16.380+0000][14.775s][info ][gc,heap     ] GC(27) Eden regions: 72->0(73)
+[2026-02-05T19:16:16.381+0000][14.775s][info ][gc,heap     ] GC(27) Survivor regions: 1->1(10)
+[2026-02-05T19:16:16.381+0000][14.775s][info ][gc,heap     ] GC(27) Old regions: 34->34
+[2026-02-05T19:16:16.381+0000][14.775s][info ][gc,heap     ] GC(27) Archive regions: 2->2
+[2026-02-05T19:16:16.381+0000][14.776s][info ][gc,heap     ] GC(27) Humongous regions: 0->0
+[2026-02-05T19:16:16.381+0000][14.776s][info ][gc,metaspace] GC(27) Metaspace: 67646K(68160K)->67646K(68160K) NonClass: 58943K(59200K)->58943K(59200K) Class: 8702K(8960K)->8702K(8960K)
+[2026-02-05T19:16:16.382+0000][14.776s][info ][gc          ] GC(27) Pause Young (Concurrent Start) (G1 Evacuation Pause) 214M->69M(254M) 7.200ms
+[2026-02-05T19:16:16.382+0000][14.776s][info ][gc,cpu      ] GC(27) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:16.382+0000][14.776s][info ][gc          ] GC(28) Concurrent Mark Cycle
+[2026-02-05T19:16:16.382+0000][14.777s][info ][gc,marking  ] GC(28) Concurrent Clear Claimed Marks
+[2026-02-05T19:16:16.382+0000][14.776s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 530853544 ns, Reaching safepoint: 272914 ns, Cleanup: 51003 ns, At safepoint: 7753002 ns, Total: 8076919 ns
+[2026-02-05T19:16:16.383+0000][14.777s][info ][gc,marking  ] GC(28) Concurrent Clear Claimed Marks 0.253ms
+[2026-02-05T19:16:16.383+0000][14.777s][info ][gc,marking  ] GC(28) Concurrent Scan Root Regions
+[2026-02-05T19:16:16.385+0000][14.779s][info ][gc,marking  ] GC(28) Concurrent Scan Root Regions 1.582ms
+[2026-02-05T19:16:16.385+0000][14.779s][info ][gc,marking  ] GC(28) Concurrent Mark
+[2026-02-05T19:16:16.385+0000][14.779s][info ][gc,marking  ] GC(28) Concurrent Mark From Roots
+[2026-02-05T19:16:16.385+0000][14.780s][info ][gc,task     ] GC(28) Using 3 workers of 3 for marking
+[2026-02-05T19:16:16.429+0000][14.823s][info ][gc,marking  ] GC(28) Concurrent Mark From Roots 43.718ms
+[2026-02-05T19:16:16.429+0000][14.823s][info ][gc,marking  ] GC(28) Concurrent Preclean
+[2026-02-05T19:16:16.430+0000][14.824s][info ][gc,marking  ] GC(28) Concurrent Preclean 0.716ms
+[2026-02-05T19:16:16.430+0000][14.825s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:16.431+0000][14.825s][info ][gc,start    ] GC(28) Pause Remark
+[2026-02-05T19:16:16.434+0000][14.829s][info ][gc          ] GC(28) Pause Remark 75M->75M(254M) 3.735ms
+[2026-02-05T19:16:16.435+0000][14.829s][info ][gc,cpu      ] GC(28) User=0.02s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:16.435+0000][14.829s][info ][safepoint   ] Safepoint "G1PauseRemark", Time since last: 48105696 ns, Reaching safepoint: 398520 ns, Cleanup: 23702 ns, At safepoint: 4367126 ns, Total: 4789348 ns
+[2026-02-05T19:16:16.435+0000][14.830s][info ][gc,marking  ] GC(28) Concurrent Mark 50.461ms
+[2026-02-05T19:16:16.436+0000][14.830s][info ][gc,marking  ] GC(28) Concurrent Rebuild Remembered Sets
+[2026-02-05T19:16:16.459+0000][14.853s][info ][gc,marking  ] GC(28) Concurrent Rebuild Remembered Sets 23.400ms
+[2026-02-05T19:16:16.459+0000][14.854s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:16.461+0000][14.855s][debug][safepoint   ] ... found polling page loop exception at pc = 0x000076f1d917cb38, stub =0x000076f1d8b10400
+[2026-02-05T19:16:16.461+0000][14.855s][info ][gc,start    ] GC(28) Pause Cleanup
+[2026-02-05T19:16:16.461+0000][14.856s][info ][gc          ] GC(28) Pause Cleanup 78M->78M(254M) 0.387ms
+[2026-02-05T19:16:16.462+0000][14.856s][info ][gc,cpu      ] GC(28) User=0.00s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:16.462+0000][14.856s][info ][safepoint   ] Safepoint "G1PauseCleanup", Time since last: 24437168 ns, Reaching safepoint: 1588983 ns, Cleanup: 14000 ns, At safepoint: 960350 ns, Total: 2563333 ns
+[2026-02-05T19:16:16.462+0000][14.857s][info ][gc,marking  ] GC(28) Concurrent Cleanup for Next Mark
+[2026-02-05T19:16:16.463+0000][14.857s][info ][gc,marking  ] GC(28) Concurrent Cleanup for Next Mark 0.568ms
+[2026-02-05T19:16:16.463+0000][14.858s][info ][gc          ] GC(28) Concurrent Mark Cycle 81.140ms
+[2026-02-05T19:16:17.063+0000][15.459s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:17.064+0000][15.460s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 602791976 ns, Reaching safepoint: 381220 ns, Cleanup: 98305 ns, At safepoint: 18801 ns, Total: 498326 ns
+[2026-02-05T19:16:17.270+0000][15.666s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:17.270+0000][15.666s][info ][gc,start    ] GC(29) Pause Young (Prepare Mixed) (G1 Evacuation Pause)
+[2026-02-05T19:16:17.271+0000][15.666s][info ][gc,task     ] GC(29) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:17.277+0000][15.673s][info ][gc,phases   ] GC(29)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:17.277+0000][15.673s][info ][gc,phases   ] GC(29)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:17.278+0000][15.673s][info ][gc,phases   ] GC(29)   Evacuate Collection Set: 2.7ms
+[2026-02-05T19:16:17.278+0000][15.674s][info ][gc,phases   ] GC(29)   Post Evacuate Collection Set: 0.7ms
+[2026-02-05T19:16:17.278+0000][15.674s][info ][gc,phases   ] GC(29)   Other: 3.0ms
+[2026-02-05T19:16:17.278+0000][15.674s][info ][gc,heap     ] GC(29) Eden regions: 73->0(3)
+[2026-02-05T19:16:17.278+0000][15.674s][info ][gc,heap     ] GC(29) Survivor regions: 1->3(10)
+[2026-02-05T19:16:17.279+0000][15.674s][info ][gc,heap     ] GC(29) Old regions: 34->34
+[2026-02-05T19:16:17.279+0000][15.675s][info ][gc,heap     ] GC(29) Archive regions: 2->2
+[2026-02-05T19:16:17.279+0000][15.675s][info ][gc,heap     ] GC(29) Humongous regions: 0->0
+[2026-02-05T19:16:17.279+0000][15.675s][info ][gc,metaspace] GC(29) Metaspace: 71032K(71488K)->71032K(71488K) NonClass: 61925K(62144K)->61925K(62144K) Class: 9107K(9344K)->9107K(9344K)
+[2026-02-05T19:16:17.279+0000][15.675s][info ][gc          ] GC(29) Pause Young (Prepare Mixed) (G1 Evacuation Pause) 215M->73M(254M) 8.909ms
+[2026-02-05T19:16:17.279+0000][15.675s][info ][gc,cpu      ] GC(29) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:17.280+0000][15.675s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 206191198 ns, Reaching safepoint: 267914 ns, Cleanup: 22401 ns, At safepoint: 9341385 ns, Total: 9631700 ns
+[2026-02-05T19:16:17.301+0000][15.697s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:17.301+0000][15.697s][info ][gc,start    ] GC(30) Pause Young (Mixed) (G1 Evacuation Pause)
+[2026-02-05T19:16:17.301+0000][15.697s][info ][gc,task     ] GC(30) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:17.306+0000][15.702s][info ][gc,phases   ] GC(30)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:17.306+0000][15.702s][info ][gc,phases   ] GC(30)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:17.306+0000][15.702s][info ][gc,phases   ] GC(30)   Evacuate Collection Set: 3.1ms
+[2026-02-05T19:16:17.306+0000][15.702s][info ][gc,phases   ] GC(30)   Post Evacuate Collection Set: 0.8ms
+[2026-02-05T19:16:17.308+0000][15.704s][info ][gc,phases   ] GC(30)   Other: 0.4ms
+[2026-02-05T19:16:17.308+0000][15.704s][info ][gc,heap     ] GC(30) Eden regions: 3->0(70)
+[2026-02-05T19:16:17.309+0000][15.704s][info ][gc,heap     ] GC(30) Survivor regions: 3->1(1)
+[2026-02-05T19:16:17.309+0000][15.705s][info ][gc,heap     ] GC(30) Old regions: 34->36
+[2026-02-05T19:16:17.309+0000][15.705s][info ][gc,heap     ] GC(30) Archive regions: 2->2
+[2026-02-05T19:16:17.309+0000][15.705s][info ][gc,heap     ] GC(30) Humongous regions: 0->0
+[2026-02-05T19:16:17.309+0000][15.705s][info ][gc,metaspace] GC(30) Metaspace: 71176K(71680K)->71176K(71680K) NonClass: 62048K(62272K)->62048K(62272K) Class: 9127K(9408K)->9127K(9408K)
+[2026-02-05T19:16:17.309+0000][15.705s][info ][gc          ] GC(30) Pause Young (Mixed) (G1 Evacuation Pause) 79M->72M(254M) 8.046ms
+[2026-02-05T19:16:17.309+0000][15.705s][info ][gc,cpu      ] GC(30) User=0.02s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:17.310+0000][15.705s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 21102095 ns, Reaching safepoint: 442423 ns, Cleanup: 12800 ns, At safepoint: 8329632 ns, Total: 8784855 ns
+[2026-02-05T19:16:17.445+0000][15.841s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:17.446+0000][15.841s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 135529932 ns, Reaching safepoint: 345918 ns, Cleanup: 101306 ns, At safepoint: 21901 ns, Total: 469125 ns
+[2026-02-05T19:16:18.015+0000][16.411s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (19 threads)
+[2026-02-05T19:16:18.016+0000][16.411s][info ][gc,start    ] GC(31) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:18.016+0000][16.411s][info ][gc,task     ] GC(31) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:18.019+0000][16.415s][info ][gc,phases   ] GC(31)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:18.019+0000][16.415s][info ][gc,phases   ] GC(31)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:18.019+0000][16.415s][info ][gc,phases   ] GC(31)   Evacuate Collection Set: 1.9ms
+[2026-02-05T19:16:18.019+0000][16.415s][info ][gc,phases   ] GC(31)   Post Evacuate Collection Set: 0.8ms
+[2026-02-05T19:16:18.020+0000][16.415s][info ][gc,phases   ] GC(31)   Other: 0.4ms
+[2026-02-05T19:16:18.020+0000][16.416s][info ][gc,heap     ] GC(31) Eden regions: 70->0(71)
+[2026-02-05T19:16:18.020+0000][16.416s][info ][gc,heap     ] GC(31) Survivor regions: 1->1(9)
+[2026-02-05T19:16:18.020+0000][16.416s][info ][gc,heap     ] GC(31) Old regions: 36->36
+[2026-02-05T19:16:18.020+0000][16.416s][info ][gc,heap     ] GC(31) Archive regions: 2->2
+[2026-02-05T19:16:18.021+0000][16.416s][info ][gc,heap     ] GC(31) Humongous regions: 0->0
+[2026-02-05T19:16:18.021+0000][16.417s][info ][gc,metaspace] GC(31) Metaspace: 76407K(76928K)->76407K(76928K) NonClass: 66509K(66752K)->66509K(66752K) Class: 9898K(10176K)->9898K(10176K)
+[2026-02-05T19:16:18.021+0000][16.417s][info ][gc          ] GC(31) Pause Young (Normal) (G1 Evacuation Pause) 212M->73M(254M) 5.477ms
+[2026-02-05T19:16:18.021+0000][16.417s][info ][gc,cpu      ] GC(31) User=0.01s Sys=0.00s Real=0.00s
+[2026-02-05T19:16:18.021+0000][16.417s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 569643056 ns, Reaching safepoint: 230512 ns, Cleanup: 46602 ns, At safepoint: 5865805 ns, Total: 6142919 ns
+[2026-02-05T19:16:18.367+0000][16.763s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (19 threads)
+[2026-02-05T19:16:18.368+0000][16.763s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 345943249 ns, Reaching safepoint: 255414 ns, Cleanup: 72803 ns, At safepoint: 20001 ns, Total: 348218 ns
+[2026-02-05T19:16:18.429+0000][16.825s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:18.429+0000][16.825s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 61299181 ns, Reaching safepoint: 410121 ns, Cleanup: 65804 ns, At safepoint: 19701 ns, Total: 495626 ns
+[2026-02-05T19:16:18.483+0000][16.878s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:18.483+0000][16.879s][info ][gc,start    ] GC(32) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:18.484+0000][16.879s][info ][gc,task     ] GC(32) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:18.487+0000][16.883s][info ][gc,phases   ] GC(32)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:18.488+0000][16.883s][info ][gc,phases   ] GC(32)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:18.488+0000][16.884s][info ][gc,phases   ] GC(32)   Evacuate Collection Set: 1.7ms
+[2026-02-05T19:16:18.488+0000][16.884s][info ][gc,phases   ] GC(32)   Post Evacuate Collection Set: 1.2ms
+[2026-02-05T19:16:18.488+0000][16.884s][info ][gc,phases   ] GC(32)   Other: 0.8ms
+[2026-02-05T19:16:18.489+0000][16.884s][info ][gc,heap     ] GC(32) Eden regions: 71->0(70)
+[2026-02-05T19:16:18.489+0000][16.885s][info ][gc,heap     ] GC(32) Survivor regions: 1->2(9)
+[2026-02-05T19:16:18.489+0000][16.885s][info ][gc,heap     ] GC(32) Old regions: 36->36
+[2026-02-05T19:16:18.489+0000][16.885s][info ][gc,heap     ] GC(32) Archive regions: 2->2
+[2026-02-05T19:16:18.490+0000][16.885s][info ][gc,heap     ] GC(32) Humongous regions: 0->0
+[2026-02-05T19:16:18.490+0000][16.886s][info ][gc,metaspace] GC(32) Metaspace: 79203K(79680K)->79203K(79680K) NonClass: 68823K(69056K)->68823K(69056K) Class: 10379K(10624K)->10379K(10624K)
+[2026-02-05T19:16:18.490+0000][16.886s][info ][gc          ] GC(32) Pause Young (Normal) (G1 Evacuation Pause) 215M->74M(254M) 6.763ms
+[2026-02-05T19:16:18.490+0000][16.886s][info ][gc,cpu      ] GC(32) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:18.490+0000][16.886s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 53286664 ns, Reaching safepoint: 356519 ns, Cleanup: 83704 ns, At safepoint: 7148071 ns, Total: 7588294 ns
+[2026-02-05T19:16:18.535+0000][16.931s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:18.536+0000][16.931s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 44817926 ns, Reaching safepoint: 352318 ns, Cleanup: 73604 ns, At safepoint: 24401 ns, Total: 450323 ns
+[2026-02-05T19:16:18.620+0000][17.016s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:18.622+0000][17.018s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 84906905 ns, Reaching safepoint: 1415174 ns, Cleanup: 90504 ns, At safepoint: 20702 ns, Total: 1526380 ns
+[2026-02-05T19:16:18.754+0000][17.150s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:18.755+0000][17.151s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 132144256 ns, Reaching safepoint: 501026 ns, Cleanup: 70004 ns, At safepoint: 52202 ns, Total: 623232 ns
+[2026-02-05T19:16:19.004+0000][17.400s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:19.005+0000][17.401s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 249506446 ns, Reaching safepoint: 501226 ns, Cleanup: 86405 ns, At safepoint: 20701 ns, Total: 608332 ns
+[2026-02-05T19:16:19.157+0000][17.553s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:19.160+0000][17.556s][info ][gc,start    ] GC(33) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:19.161+0000][17.556s][info ][gc,task     ] GC(33) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:19.165+0000][17.560s][info ][gc,phases   ] GC(33)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:19.165+0000][17.561s][info ][gc,phases   ] GC(33)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:19.165+0000][17.561s][info ][gc,phases   ] GC(33)   Evacuate Collection Set: 2.5ms
+[2026-02-05T19:16:19.165+0000][17.561s][info ][gc,phases   ] GC(33)   Post Evacuate Collection Set: 0.9ms
+[2026-02-05T19:16:19.165+0000][17.561s][info ][gc,phases   ] GC(33)   Other: 0.7ms
+[2026-02-05T19:16:19.166+0000][17.561s][info ][gc,heap     ] GC(33) Eden regions: 70->0(69)
+[2026-02-05T19:16:19.166+0000][17.562s][info ][gc,heap     ] GC(33) Survivor regions: 2->3(9)
+[2026-02-05T19:16:19.166+0000][17.562s][info ][gc,heap     ] GC(33) Old regions: 36->36
+[2026-02-05T19:16:19.166+0000][17.562s][info ][gc,heap     ] GC(33) Archive regions: 2->2
+[2026-02-05T19:16:19.166+0000][17.562s][info ][gc,heap     ] GC(33) Humongous regions: 0->0
+[2026-02-05T19:16:19.166+0000][17.562s][info ][gc,metaspace] GC(33) Metaspace: 82803K(83328K)->82803K(83328K) NonClass: 71953K(72192K)->71953K(72192K) Class: 10850K(11136K)->10850K(11136K)
+[2026-02-05T19:16:19.167+0000][17.562s][info ][gc          ] GC(33) Pause Young (Normal) (G1 Evacuation Pause) 214M->77M(254M) 6.323ms
+[2026-02-05T19:16:19.167+0000][17.562s][info ][gc,cpu      ] GC(33) User=0.02s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:19.167+0000][17.563s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 151952284 ns, Reaching safepoint: 3247168 ns, Cleanup: 92105 ns, At safepoint: 6656145 ns, Total: 9995418 ns
+[2026-02-05T19:16:19.657+0000][18.052s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:19.657+0000][18.053s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 489823815 ns, Reaching safepoint: 566930 ns, Cleanup: 150807 ns, At safepoint: 37802 ns, Total: 755539 ns
+[2026-02-05T19:16:19.822+0000][18.217s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (21 threads)
+[2026-02-05T19:16:19.822+0000][18.218s][info ][gc,start    ] GC(34) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:19.822+0000][18.218s][info ][gc,task     ] GC(34) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:19.828+0000][18.224s][info ][gc,phases   ] GC(34)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:19.829+0000][18.225s][info ][gc,phases   ] GC(34)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:19.829+0000][18.225s][info ][gc,phases   ] GC(34)   Evacuate Collection Set: 4.2ms
+[2026-02-05T19:16:19.829+0000][18.225s][info ][gc,phases   ] GC(34)   Post Evacuate Collection Set: 1.5ms
+[2026-02-05T19:16:19.830+0000][18.225s][info ][gc,phases   ] GC(34)   Other: 0.5ms
+[2026-02-05T19:16:19.830+0000][18.226s][info ][gc,heap     ] GC(34) Eden regions: 69->0(68)
+[2026-02-05T19:16:19.830+0000][18.226s][info ][gc,heap     ] GC(34) Survivor regions: 3->4(9)
+[2026-02-05T19:16:19.830+0000][18.226s][info ][gc,heap     ] GC(34) Old regions: 36->36
+[2026-02-05T19:16:19.831+0000][18.226s][info ][gc,heap     ] GC(34) Archive regions: 2->2
+[2026-02-05T19:16:19.831+0000][18.226s][info ][gc,heap     ] GC(34) Humongous regions: 0->0
+[2026-02-05T19:16:19.831+0000][18.227s][info ][gc,metaspace] GC(34) Metaspace: 84699K(85248K)->84699K(85248K) NonClass: 73661K(73920K)->73661K(73920K) Class: 11038K(11328K)->11038K(11328K)
+[2026-02-05T19:16:19.831+0000][18.227s][info ][gc          ] GC(34) Pause Young (Normal) (G1 Evacuation Pause) 215M->79M(254M) 9.058ms
+[2026-02-05T19:16:19.831+0000][18.227s][info ][gc,cpu      ] GC(34) User=0.04s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:19.831+0000][18.227s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 164074913 ns, Reaching safepoint: 282115 ns, Cleanup: 114606 ns, At safepoint: 9413988 ns, Total: 9810709 ns
+[2026-02-05T19:16:20.797+0000][19.192s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (20 threads)
+[2026-02-05T19:16:20.797+0000][19.193s][info ][gc,start    ] GC(35) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:20.797+0000][19.193s][info ][gc,task     ] GC(35) Using 6 workers of 10 for evacuation
+[2026-02-05T19:16:20.805+0000][19.201s][info ][gc,phases   ] GC(35)   Pre Evacuate Collection Set: 0.1ms
+[2026-02-05T19:16:20.805+0000][19.201s][info ][gc,phases   ] GC(35)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:20.805+0000][19.201s][info ][gc,phases   ] GC(35)   Evacuate Collection Set: 5.5ms
+[2026-02-05T19:16:20.805+0000][19.201s][info ][gc,phases   ] GC(35)   Post Evacuate Collection Set: 1.3ms
+[2026-02-05T19:16:20.806+0000][19.201s][info ][gc,phases   ] GC(35)   Other: 0.5ms
+[2026-02-05T19:16:20.806+0000][19.202s][info ][gc,heap     ] GC(35) Eden regions: 68->0(64)
+[2026-02-05T19:16:20.806+0000][19.202s][info ][gc,heap     ] GC(35) Survivor regions: 4->6(9)
+[2026-02-05T19:16:20.806+0000][19.202s][info ][gc,heap     ] GC(35) Old regions: 36->36
+[2026-02-05T19:16:20.806+0000][19.202s][info ][gc,heap     ] GC(35) Archive regions: 2->2
+[2026-02-05T19:16:20.807+0000][19.202s][info ][gc,heap     ] GC(35) Humongous regions: 0->0
+[2026-02-05T19:16:20.807+0000][19.203s][info ][gc,metaspace] GC(35) Metaspace: 87306K(87808K)->87306K(87808K) NonClass: 76105K(76352K)->76105K(76352K) Class: 11200K(11456K)->11200K(11456K)
+[2026-02-05T19:16:20.807+0000][19.203s][info ][gc          ] GC(35) Pause Young (Normal) (G1 Evacuation Pause) 215M->82M(254M) 9.863ms
+[2026-02-05T19:16:20.807+0000][19.203s][info ][gc,cpu      ] GC(35) User=0.06s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:20.807+0000][19.203s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 965411791 ns, Reaching safepoint: 322717 ns, Cleanup: 117306 ns, At safepoint: 10321336 ns, Total: 10761359 ns
+[2026-02-05T19:16:21.609+0000][20.004s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (24 threads)
+[2026-02-05T19:16:21.609+0000][20.005s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 801181171 ns, Reaching safepoint: 346118 ns, Cleanup: 184609 ns, At safepoint: 23502 ns, Total: 554229 ns
+[2026-02-05T19:16:21.779+0000][20.174s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (24 threads)
+[2026-02-05T19:16:21.779+0000][20.175s][info ][gc,start    ] GC(36) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:21.779+0000][20.175s][info ][gc,task     ] GC(36) Using 10 workers of 10 for evacuation
+[2026-02-05T19:16:21.788+0000][20.184s][info ][gc,phases   ] GC(36)   Pre Evacuate Collection Set: 0.3ms
+[2026-02-05T19:16:21.789+0000][20.185s][info ][gc,phases   ] GC(36)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:21.789+0000][20.185s][info ][gc,phases   ] GC(36)   Evacuate Collection Set: 6.1ms
+[2026-02-05T19:16:21.789+0000][20.185s][info ][gc,phases   ] GC(36)   Post Evacuate Collection Set: 2.4ms
+[2026-02-05T19:16:21.789+0000][20.185s][info ][gc,phases   ] GC(36)   Other: 0.5ms
+[2026-02-05T19:16:21.790+0000][20.185s][info ][gc,heap     ] GC(36) Eden regions: 64->0(61)
+[2026-02-05T19:16:21.790+0000][20.186s][info ][gc,heap     ] GC(36) Survivor regions: 6->7(9)
+[2026-02-05T19:16:21.790+0000][20.186s][info ][gc,heap     ] GC(36) Old regions: 36->37
+[2026-02-05T19:16:21.790+0000][20.186s][info ][gc,heap     ] GC(36) Archive regions: 2->2
+[2026-02-05T19:16:21.790+0000][20.186s][info ][gc,heap     ] GC(36) Humongous regions: 0->0
+[2026-02-05T19:16:21.791+0000][20.186s][info ][gc,metaspace] GC(36) Metaspace: 89475K(90048K)->89475K(90048K) NonClass: 78049K(78336K)->78049K(78336K) Class: 11425K(11712K)->11425K(11712K)
+[2026-02-05T19:16:21.791+0000][20.187s][info ][gc          ] GC(36) Pause Young (Normal) (G1 Evacuation Pause) 210M->86M(254M) 11.824ms
+[2026-02-05T19:16:21.791+0000][20.187s][info ][gc,cpu      ] GC(36) User=0.07s Sys=0.01s Real=0.01s
+[2026-02-05T19:16:21.791+0000][20.187s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 169339288 ns, Reaching safepoint: 257613 ns, Cleanup: 56903 ns, At safepoint: 12322740 ns, Total: 12637256 ns
+[2026-02-05T19:16:22.736+0000][21.132s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (24 threads)
+[2026-02-05T19:16:22.736+0000][21.132s][info ][safepoint   ] Safepoint "ICBufferFull", Time since last: 944797834 ns, Reaching safepoint: 339718 ns, Cleanup: 120806 ns, At safepoint: 18001 ns, Total: 478525 ns
+[2026-02-05T19:16:22.760+0000][21.156s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (24 threads)
+[2026-02-05T19:16:22.761+0000][21.156s][info ][gc,start    ] GC(37) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:22.761+0000][21.157s][info ][gc,task     ] GC(37) Using 10 workers of 10 for evacuation
+[2026-02-05T19:16:22.769+0000][21.165s][info ][gc,phases   ] GC(37)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:22.769+0000][21.165s][info ][gc,phases   ] GC(37)   Merge Heap Roots: 0.1ms
+[2026-02-05T19:16:22.770+0000][21.165s][info ][gc,phases   ] GC(37)   Evacuate Collection Set: 5.3ms
+[2026-02-05T19:16:22.770+0000][21.166s][info ][gc,phases   ] GC(37)   Post Evacuate Collection Set: 2.1ms
+[2026-02-05T19:16:22.770+0000][21.166s][info ][gc,phases   ] GC(37)   Other: 0.6ms
+[2026-02-05T19:16:22.770+0000][21.166s][info ][gc,heap     ] GC(37) Eden regions: 61->0(62)
+[2026-02-05T19:16:22.771+0000][21.166s][info ][gc,heap     ] GC(37) Survivor regions: 7->6(9)
+[2026-02-05T19:16:22.771+0000][21.167s][info ][gc,heap     ] GC(37) Old regions: 37->38
+[2026-02-05T19:16:22.771+0000][21.167s][info ][gc,heap     ] GC(37) Archive regions: 2->2
+[2026-02-05T19:16:22.771+0000][21.167s][info ][gc,heap     ] GC(37) Humongous regions: 0->0
+[2026-02-05T19:16:22.771+0000][21.167s][info ][gc,metaspace] GC(37) Metaspace: 94101K(94656K)->94101K(94656K) NonClass: 81912K(82176K)->81912K(82176K) Class: 12189K(12480K)->12189K(12480K)
+[2026-02-05T19:16:22.771+0000][21.167s][info ][gc          ] GC(37) Pause Young (Normal) (G1 Evacuation Pause) 208M->88M(254M) 10.766ms
+[2026-02-05T19:16:22.771+0000][21.167s][info ][gc,cpu      ] GC(37) User=0.07s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:22.772+0000][21.167s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 23618326 ns, Reaching safepoint: 380420 ns, Cleanup: 43802 ns, At safepoint: 11110877 ns, Total: 11535099 ns
+[2026-02-05T19:16:23.133+0000][21.529s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (24 threads)
+[2026-02-05T19:16:23.134+0000][21.529s][info ][gc,start    ] GC(38) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:23.134+0000][21.529s][info ][gc,task     ] GC(38) Using 10 workers of 10 for evacuation
+[2026-02-05T19:16:23.142+0000][21.537s][info ][gc,phases   ] GC(38)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:23.142+0000][21.538s][info ][gc,phases   ] GC(38)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:23.142+0000][21.538s][info ][gc,phases   ] GC(38)   Evacuate Collection Set: 6.1ms
+[2026-02-05T19:16:23.142+0000][21.538s][info ][gc,phases   ] GC(38)   Post Evacuate Collection Set: 1.2ms
+[2026-02-05T19:16:23.143+0000][21.538s][info ][gc,phases   ] GC(38)   Other: 0.5ms
+[2026-02-05T19:16:23.143+0000][21.539s][info ][gc,heap     ] GC(38) Eden regions: 62->0(55)
+[2026-02-05T19:16:23.143+0000][21.539s][info ][gc,heap     ] GC(38) Survivor regions: 6->9(9)
+[2026-02-05T19:16:23.143+0000][21.539s][info ][gc,heap     ] GC(38) Old regions: 38->39
+[2026-02-05T19:16:23.143+0000][21.539s][info ][gc,heap     ] GC(38) Archive regions: 2->2
+[2026-02-05T19:16:23.144+0000][21.539s][info ][gc,heap     ] GC(38) Humongous regions: 0->0
+[2026-02-05T19:16:23.144+0000][21.539s][info ][gc,metaspace] GC(38) Metaspace: 95735K(96256K)->95735K(96256K) NonClass: 83197K(83456K)->83197K(83456K) Class: 12538K(12800K)->12538K(12800K)
+[2026-02-05T19:16:23.144+0000][21.540s][info ][gc          ] GC(38) Pause Young (Normal) (G1 Evacuation Pause) 212M->95M(254M) 10.336ms
+[2026-02-05T19:16:23.144+0000][21.540s][info ][gc,cpu      ] GC(38) User=0.07s Sys=0.00s Real=0.01s
+[2026-02-05T19:16:23.144+0000][21.540s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 361484960 ns, Reaching safepoint: 323417 ns, Cleanup: 47403 ns, At safepoint: 10685654 ns, Total: 11056474 ns
+[2026-02-05T19:16:23.722+0000][22.118s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (25 threads)
+[2026-02-05T19:16:23.723+0000][22.119s][info ][gc,start    ] GC(39) Pause Young (Normal) (G1 Evacuation Pause)
+[2026-02-05T19:16:23.723+0000][22.119s][info ][gc,task     ] GC(39) Using 10 workers of 10 for evacuation
+[2026-02-05T19:16:23.731+0000][22.127s][info ][gc,phases   ] GC(39)   Pre Evacuate Collection Set: 0.2ms
+[2026-02-05T19:16:23.732+0000][22.128s][info ][gc,phases   ] GC(39)   Merge Heap Roots: 0.2ms
+[2026-02-05T19:16:23.732+0000][22.128s][info ][gc,phases   ] GC(39)   Evacuate Collection Set: 5.7ms
+[2026-02-05T19:16:23.732+0000][22.128s][info ][gc,phases   ] GC(39)   Post Evacuate Collection Set: 1.8ms
+[2026-02-05T19:16:23.733+0000][22.128s][info ][gc,phases   ] GC(39)   Other: 0.5ms
+[2026-02-05T19:16:23.733+0000][22.129s][info ][gc,heap     ] GC(39) Eden regions: 55->0(60)
+[2026-02-05T19:16:23.733+0000][22.129s][info ][gc,heap     ] GC(39) Survivor regions: 9->3(8)
+[2026-02-05T19:16:23.733+0000][22.129s][info ][gc,heap     ] GC(39) Old regions: 39->43
+[2026-02-05T19:16:23.733+0000][22.129s][info ][gc,heap     ] GC(39) Archive regions: 2->2
+[2026-02-05T19:16:23.734+0000][22.129s][info ][gc,heap     ] GC(39) Humongous regions: 0->0
+[2026-02-05T19:16:23.734+0000][22.130s][info ][gc,metaspace] GC(39) Metaspace: 100600K(101184K)->100600K(101184K) NonClass: 87410K(87744K)->87410K(87744K) Class: 13189K(13440K)->13189K(13440K)
+[2026-02-05T19:16:23.734+0000][22.130s][info ][gc          ] GC(39) Pause Young (Normal) (G1 Evacuation Pause) 205M->93M(254M) 10.988ms
+[2026-02-05T19:16:23.734+0000][22.130s][info ][gc,cpu      ] GC(39) User=0.07s Sys=0.00s Real=0.02s
+[2026-02-05T19:16:23.735+0000][22.130s][info ][safepoint   ] Safepoint "G1CollectForAllocation", Time since last: 578281613 ns, Reaching safepoint: 437122 ns, Cleanup: 165309 ns, At safepoint: 11584401 ns, Total: 12186832 ns
+[2026-02-05T19:16:23.988+0000][22.384s][info ][gc,heap,exit] Heap
+[2026-02-05T19:16:23.993+0000][22.388s][info ][gc,heap,exit]  garbage-first heap   total 260096K, used 112665K [0x0000000707200000, 0x0000000800000000)
+[2026-02-05T19:16:23.993+0000][22.389s][info ][gc,heap,exit]   region size 2048K, 12 young (24576K), 3 survivors (6144K)
+[2026-02-05T19:16:23.994+0000][22.390s][info ][gc,heap,exit]  Metaspace       used 100966K, committed 101568K, reserved 1179648K
+[2026-02-05T19:16:23.994+0000][22.390s][info ][gc,heap,exit]   class space    used 13244K, committed 13568K, reserved 1048576K
+[2026-02-05T19:16:23.995+0000][22.390s][debug][safepoint   ] Safepoint synchronization initiated using futex wait barrier. (16 threads)

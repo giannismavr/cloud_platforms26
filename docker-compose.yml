@@ -10,9 +10,15 @@ services:
       - ./nodered_data:/data
     environment:
       - TZ=Europe/Athens
+    depends_on: 
+      minio:
+        condition: service_healthy
     networks:
-      - campus-net
+      - iot-net
     restart: always
+    
+
+
     
 # MinIO 
   minio:
@@ -26,8 +32,13 @@ services:
     ports:
       - "9000:9000" # MinIO API port
       - "9001:9001" # MinIO Console/Browser UI port
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
-      - campus-net
+      - iot-net
     volumes:
       - ./minio/data:/data # Persist object data
     
@@ -36,6 +47,7 @@ services:
   rabbitmq:
     image: rabbitmq:3.12-management # Includes management plugin for UI
     container_name: rabbitmq
+    hostname: rabbitmq
     restart: always
     environment:
       - RABBITMQ_DEFAULT_USER=user
@@ -43,8 +55,13 @@ services:
     ports:
       - "5672:5672" # Standard AMQP port
       - "15672:15672" # Management UI port
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "check_running"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
-      - campus-net
+      - iot-net
     volumes:
       - ./rabbitmq/data:/var/lib/rabbitmq # Persist queue and broker data
 
@@ -64,12 +81,15 @@ services:
       TB_QUEUE_RABBIT_MQ_PASSWORD: password
       TB_QUEUE_RABBIT_MQ_HOST: rabbitmq
       TB_QUEUE_RABBIT_MQ_PORT: 5672
+    depends_on: 
+      rabbitmq:
+        condition: service_healthy
     networks:
-      - campus-net
+      - iot-net
     volumes:
       - ./thingsboard/mytb-data:/data
       - ./thingsboard/mytb-logs:/var/log/thingsboard  
 
 networks:
-  campus-net:
+  iot-net:
     driver: bridge
