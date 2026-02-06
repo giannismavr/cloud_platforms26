@@ -157,43 +157,7 @@ docker compose logs -f
 
 ---
 
-## 8) (Bonus) Kubernetes Deployment (MicroK8s)
-
-> Αν θες να “πιάσεις” και το κριτήριο Kubernetes: τρέχεις το ίδιο σύστημα σε MicroK8s VM.
-
-### 8.1 Setup MicroK8s
-```bash
-sudo snap install microk8s --classic
-microk8s status --wait-ready
-microk8s enable dns storage
-alias kubectl='microk8s kubectl'
-```
-
-### 8.2 Build & push images (Docker Hub / GHCR)
-Παράδειγμα (προσαρμόζεις τα ονόματα):
-```bash
-docker build -t <dockerhub_user>/cloud-nodered:latest ./nodered
-docker push <dockerhub_user>/cloud-nodered:latest
-```
-
-Κάνε αντίστοιχα για minio / rabbitmq / thingsboard (αν υπάρχουν custom Dockerfiles).
-
-### 8.3 Deploy
-Δύο επιλογές:
-- **Option A (recommended):** γράφεις manifests (`k8s/`) και κάνεις `kubectl apply -f k8s/`
-- **Option B:** χρησιμοποιείς `kompose` για μετατροπή compose→k8s
-
-Παράδειγμα Option B:
-```bash
-sudo snap install kompose
-kompose convert -f docker-compose.yml -o k8s/
-kubectl apply -f k8s/
-kubectl get pods -A
-```
-
----
-
-## 9) Demo checklist (15’ παρουσίαση)
+## 8) Demo checklist
 
 - `docker compose up -d`
 - Δείχνω:
@@ -203,11 +167,9 @@ kubectl get pods -A
   4) RabbitMQ queue (messages/rates)
   5) ThingsBoard integration + Rule Chain (create/clear alarm, battery threshold)
   6) Guard Dashboard: alarms + acknowledge
-- Εκτελώ UseCase1 και UseCase2 live (ή video demo αν απαιτηθεί)
-
 ---
 
-## 10) Troubleshooting
+## 9) Troubleshooting
 
 - **Δεν εμφανίζονται alarms**
   - Έλεγξε ότι ο Node‑RED κάνει successful login (JWT) και γράφει objects στο MinIO.
@@ -219,7 +181,7 @@ kubectl get pods -A
 
 ---
 
-## 11) Authors / Team
+## 10) Authors / Team
 
 - Παναγιώτης Χάρος (ais25133)
 - Ιωάννης Μαυροδήμος (ais25126)
