@@ -9,3 +9,4 @@ nodered_data/*.backup
 Thumbs.db
 *.log
 seed/tb.sql
+seed/tb.sql
