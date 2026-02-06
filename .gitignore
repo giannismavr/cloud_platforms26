@@ -8,4 +8,4 @@ nodered_data/*.backup
 .DS_Store
 Thumbs.db
 *.log
-eed/tb.sql
+seed/tb.sql
